@@ -184,4 +184,78 @@ rev += ' ';
     return rev.slice(0, -1);
 
 ```
+
+*https://www.codewars.com/kata/mumbling/train/javascript
+
+```
+function accum(s) {
+let Arr  = [];
+for (let i = 0; i < s.length; i++){
+Arr.push(form(s[i], i+1));
+}
+  return Arr.join('-');
+}
+function form(str, num){
+let letter = str.toUpperCase();
+while(letter.length != num){
+letter += str.toLowerCase();
+}
+  return letter;
+}
+```
+
+*https://www.codewars.com/kata/friend-or-foe/train/javascript
+
+```
+function friend(friends){
+let arr = [];
+for(let i = 0; i < friends.length; i++){
+if(friends[i].length === 4){
+arr.push(friends[i]);
+}
+}
+  return arr;
+}
+
+```
+*https://www.codewars.com/kata/list-filtering/train/javascri
+
+```
+function filter_list(l) {
+let arr = [];
+for (let i = 0; i < l.length; i++) {
+if (typeof l[i] === 'number') {
+arr.push(l[i]);
+}
+}
+  return arr;
+}
+```
+
+*https://www.codewars.com/kata/count-odd-numbers-below-n/train/javascript
+
+```
+function oddCount(num){
+let count = 0;
+for(let i = 0; i < num; i++){
+if(i % 2 ===1){
+count++;
+}
+}
+   return count;
+}
+
+```
+*https://www.codewars.com/kata/l1-set-alarm/train/javascript
+
+```
+function setAlarm(employed, vacation){
+if (employed && !vacation){
+return true;
+} else {
+return false;
+}
+}
+
+```
 }================
