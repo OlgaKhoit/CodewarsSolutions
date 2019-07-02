@@ -283,5 +283,203 @@ let strOfNums = (num1, num2) => {
 }
 
 ```
+https://www.codewars.com/kata/jennys-secret-message/train/javascript
 
+```
+function greet(name){
+  return name !== "Johnny" ? "Hello, " + name + "!" : "Hello, my love!";
+  }
 
+```
+*https://www.codewars.com/kata/string-repeat/train/javascript
+
+```
+function repeatStr (n, s) { 
+let str = '';
+for (let i = 0; i < n; i++) {
+str += s; 
+} 
+  return str;
+}
+
+```
+*https://www.codewars.com/kata/sum-without-highest-and-lowest-number/train/javascript
+```
+function sumArray(array) {
+if (array == null) {
+  return 0;
+} else if (array.length < 2){
+  return 0;
+} else {
+array = array.sort(function(a,b) { return a - b;});
+let total = 0;
+for(let i = 1; i < array.length - 1; i++) {
+total += array[i];
+}
+  return total;
+}
+}
+```
+*https://www.codewars.com/kata/basic-mathematical-operations/train/javascript
+
+```
+function basicOp(operation, value1, value2){
+  if(operation == '+')return value1 + value2;
+  if(operation == '-')return value1 - value2;
+  if(operation == '*')return value1 * value2;
+  if(operation == '/')return value1 / value2;
+}
+```
+*https://www.codewars.com/kata/to-square-root-or-not-to-square-root/train/javascript
+```
+function squareOrSquareRoot(array) {
+  let proces = [];
+for (let i=0; i<array.length; i++){
+    let number = array[i];
+ if (Math.sqrt(number) == Math.floor(Math.sqrt(number))){
+  proces.push(Math.sqrt(number));
+ } else {
+ proces.push(number*number);
+ }
+ }
+   return proces;
+ }
+```
+* https://www.codewars.com/kata/rock-paper-scissors/train/javascript
+```
+const rps = (p1, p2) => {
+  if (p1 === p2) return 'Draw!';
+  if (p1 === 'rock' && p2 === 'scissors') return 'Player 1 won!';
+  if (p1 === 'scissors' && p2 === 'paper') return 'Player 1 won!';
+  if (p1 === 'paper' && p2 === 'rock') return 'Player 1 won!';
+  return 'Player 2 won!';
+};
+```
+*https://www.codewars.com/kata/convert-boolean-values-to-strings-yes-or-no/train/javascript
+```
+function boolToWord( bool ){
+  return bool ? 'Yes' : 'No';
+}
+```
+*https://www.codewars.com/kata/sorted-yes-no-how/train/javascript
+
+```
+function isSortedAndHow(array) {
+let arr1 = [];
+arr1 = arr1.concat(array);
+arr1.sort(function(a,b){return b-a});
+arr1 = arr1.join('');
+let arr = [];
+arr = arr.concat(array);
+arr.sort(function(a,b){return a-b});
+arr = arr.join('');
+array = array.join('');
+if(arr === array){
+  return 'yes, ascending';
+} else if(arr1 === array){
+  return 'yes, descending';
+} else{return 'no'}
+}
+```
+*https://www.codewars.com/kata/keep-hydrated-1/train/javascript
+
+```
+function litres(time) {
+let lit = time * 0.5; 
+lit = lit - lit % 1; 
+  return lit;
+}
+```
+
+*https://www.codewars.com/kata/convert-a-number-to-a-string/train/javascript
+
+```
+function numberToString(num) {
+  return `${num}`;
+}
+```
+
+*https://www.codewars.com/kata/welcome/train/javascript
+```
+function greet(language) {
+let database ={
+english: "Welcome",
+czech: "Vitejte",
+danish: "Velkomst",
+dutch: "Welkom",
+estonian: "Tere tulemast",
+finnish: "Tervetuloa",
+flemish: "Welgekomen",
+french: "Bienvenue",
+german: "Willkommen",
+irish: "Failte",
+italian: "Benvenuto",
+latvian: "Gaidits",
+lithuanian: "Laukiamas",
+polish: "Witamy",
+spanish: "Bienvenido",
+swedish: "Valkommen",
+welsh: "Croeso"
+}
+  return database[language]||"Welcome";
+}
+```
+
+*https://www.codewars.com/kata/square-n-sum/train/javascript
+
+```
+function squareSum(numbers){
+let total = 0;
+for(var i = 0; i < numbers.length; i++) {
+total += numbers[i] * numbers[i]; 
+}
+  return total;
+}
+
+```
+
+*https://www.codewars.com/kata/do-i-get-a-bonus/train/javascript
+```
+function bonusTime(salary, bonus) {
+if(bonus === true){
+  return '£' + salary * 10;
+} else {
+  return '£' + salary;
+}
+}
+```
+*https://www.codewars.com/kata/are-you-playing-banjo/train/javascript
+
+```
+function areYouPlayingBanjo(name) {
+if (name.toLowerCase().charAt(0) == 'r'){
+name = name + ' plays banjo';
+} else {
+name = name + ' does not play banjo';
+}
+  return name;
+}
+```
+*https://www.codewars.com/kata/holiday-vi-shark-pontoon/train/javascript
+
+```
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+  if(dolphin){
+    sharkSpeed /= 2;
+  }
+  return pontoonDistance/youSpeed < sharkDistance/sharkSpeed ? "Alive!" : "Shark Bait!";
+}
+```
+*https://www.codewars.com/kata/returning-strings/train/javascript
+```
+function greet(name){
+ return "Hello, " + name + " how are you doing today?";
+ }
+```
+*https://www.codewars.com/kata/string-ends-with/train/javascript
+
+```
+function solution(str, ending){
+return str.substr(-ending.length) === ending;
+}
+```
