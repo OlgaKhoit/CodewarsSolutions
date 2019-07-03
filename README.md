@@ -483,3 +483,77 @@ function solution(str, ending){
 return str.substr(-ending.length) === ending;
 }
 ```
+*https://www.codewars.com/kata/spongebob-meme/train/javascript
+
+```
+function spongeMeme(sentence) {
+let str = '';
+for(let i = 0; i < sentence.length; i++){
+if(i % 2 === 0) { str += sentence[i].toUpperCase();
+} else { str += sentence[i].toLowerCase();
+}
+}
+  return str;
+}
+```
+*https://www.codewars.com/kata/duck-duck-goose/train/javascript
+
+```
+function duckDuckGoose(players, goose) {
+  return players[(goose - 1) % players.length].name;
+}
+```
+*https://www.codewars.com/kata/removing-elements/train/javascript
+
+```
+function removeEveryOther(arr){
+  var newArr=[];
+for (var i = 0; i < arr.length; i+=2){
+  newArr.push(arr[i]);
+  }
+return newArr;
+}
+```
+*https://www.codewars.com/kata/transportation-on-vacation/train/javascript
+```
+function rentalCarCost(d) {
+  let price = 40 * d;
+  if (d < 3) return price
+  return d >= 7 ? price - 50 : price - 20;
+  }
+```
+*https://www.codewars.com/kata/find-the-first-non-consecutive-number/train/javascript
+
+```
+function firstNonConsecutive (arr) {
+for (let i = 1; i < arr.length; i++) {
+if (arr[i] - 1 !== arr[i - 1]) return arr[i];
+}
+  return null;
+}
+
+```
+*https://www.codewars.com/kata/volume-of-a-cuboid/train/javascript
+```
+let Kata;
+Kata = (function() {
+function Kata() {}
+Kata.getVolumeOfCuboid = function(length, width, height) {
+    return length * width * height;
+}
+  return Kata;
+})();
+```
+*https://www.codewars.com/kata/55902c5eaa8069a5b4000083/solutions/javascript
+
+```
+function formatMoney(amount){
+  return `$${amount.toFixed(2)}`
+}
+```
+*https://www.codewars.com/kata/a-function-within-a-function/train/javascript
+```
+function always (n) {
+  return () => n;
+}
+```
