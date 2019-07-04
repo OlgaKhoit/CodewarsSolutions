@@ -557,3 +557,63 @@ function always (n) {
   return () => n;
 }
 ```
+
+*https://www.codewars.com/kata/sentence-smash/train/javascript
+```
+function smash (words) {
+  return words.join(' ');
+  }
+ ```
+
+ *https://www.codewars.com/kata/is-there-a-vowel-in-there/train/javascript
+ ```
+ function isVow(a){
+ let newArr = a.map(function(n) {
+ if (n === 97 || n === 101 || n === 105 || n === 111 || n === 117) {
+   return String.fromCharCode(n);
+ }
+   return n;
+ });
+    return newArr;
+ }
+ ```
+ *https://www.codewars.com/kata/grasshopper-if-slash-else-syntax-debug/train/javascript
+ ```
+ function checkAlive (health) {
+  return (health <= 0) ? false : true
+ }
+ ```
+ *https://www.codewars.com/kata/finish-guess-the-number-game/train/javascripte
+ ```
+ class Guesser {
+ constructor(number, lives) {
+ this.number = number
+ this.lives = lives
+ }
+ guess(n) {
+ if (!this.lives) throw new Error('You have no more life')
+ if (n === this.number) return true
+ this.lives--
+     return false
+ }
+ }
+ ```
+ *https://www.codewars.com/kata/the-if-function/train/javascript
+ ```
+ function _if(bool, func1, func2) {
+   bool ? func1() : func2();
+ }
+ ```
+
+ *https://www.codewars.com/kata/printing-array-elements-with-comma-delimiters/train/javascript
+ ```
+ function printArray(array){
+   return array.join(',');
+   }
+  ```
+  *https://www.codewars.com/kata/simple-fun-number-1-seats-in-theater/train/javascript
+  ```
+  function seatsInTheater(nCols, nRows, col, row) {
+    return (nCols - col + 1) * (nRows - row);
+  }
+  ```
