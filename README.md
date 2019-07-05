@@ -670,3 +670,55 @@ function smash (words) {
   }
   }
   ```
+*https://www.codewars.com/kata/leonardo-dicaprio-and-oscars/train/javascript
+```
+function leo(oscar){
+if (oscar === 88) {
+   return "Leo finally won the oscar! Leo is happy";
+} else if (oscar === 86) {
+    return "Not even for Wolf of wallstreet?!";
+} else if (oscar < 88) {
+    return "When will you give Leo an Oscar?";
+} else {
+    return "Leo got one already!";
+}
+}
+```
+*https://www.codewars.com/kata/how-good-are-you-really/train/javascript
+
+```
+function betterThanAverage(classPoints, yourPoints) {
+let sum = 0;
+for (let i = 0; i < classPoints.length; i++){
+sum += classPoints[i];
+}
+sum = sum/classPoints.length
+if(sum > yourPoints) {
+   return false
+} else {
+    return true
+}
+}
+```
+*https://www.codewars.com/kata/how-old-will-i-be-in-2099/train/javascript
+```
+function  calculateAge(birthDate, otherDate) {
+let age = otherDate - birthDate;
+if(age === 1) {
+  return 'You are ' + age + ' year old.';
+} else if(age > 1) {
+  return 'You are ' + age + ' years old.';
+} else if (age < -1) {
+   return 'You will be born in ' +  Math.abs(age) + ' years.';
+} else if (age === -1) {
+   return 'You will be born in ' + Math.abs(age) + ' year.';
+} else {
+   return 'You were born this very year!';
+}
+}
+```
+
+
+
+
+
