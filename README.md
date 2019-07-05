@@ -617,3 +617,56 @@ function smash (words) {
     return (nCols - col + 1) * (nRows - row);
   }
   ```
+  *https://www.codewars.com/kata/training-js-number-4-basic-data-types-array/train/javascript
+  ```
+  function getLength(arr){
+    return arr.length;
+  }
+  function getFirst(arr){
+    return arr[0];
+  }
+  function getLast(arr){
+    return arr[arr.length - 1];
+  }
+  function pushElement(arr){
+  let l =1;
+  arr.push(l);
+    return arr;
+  }
+  function popElement(arr){
+  arr.pop();
+    return arr;
+  }
+
+  ```
+  *https://www.codewars.com/kata/how-many-stairs-will-suzuki-climb-in-20-years/train/javascript
+
+  ```
+  function stairsIn20(s){
+    return s.reduce((s, day) => s.concat(day)).reduce((sum, count) => sum + count) * 20;
+  }
+
+  ```
+  *https://www.codewars.com/kata/lario-and-muigi-pipe-problem/train/javascript
+  ```
+  function pipeFix(numbers){
+  let first = numbers[0];
+  let last = numbers[numbers.length-1];
+  let arr = [];
+  for(let i = first; i <= last; i++) {
+  arr.push(i);
+  }
+    return arr;
+  }
+
+  ```
+  *https://www.codewars.com/kata/fix-the-bugs-syntax-my-first-kata/train/javascript
+  ```
+  function myFirstKata(a, b) {
+  if (typeof(a) != "number" || typeof(b) != "number") {
+      return false;
+  } else {
+      return a % b + b % a;
+  }
+  }
+  ```
