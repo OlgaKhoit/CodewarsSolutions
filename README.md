@@ -770,7 +770,7 @@ a += "***" + b[i];
 ```
 function remove(s,n){
 let array = s.split(""),
-let count = 0;
+count = 0;
 for(let i = 0; i < array.length; i++){
 if(array[i] === "!"){
 count++;
@@ -781,6 +781,21 @@ i--;
 }
 }
   return array.join("");
+}
+```
+*https://www.codewars.com/kata/pole-vault-starting-marks/train/javascript
+```
+function startingMark(bodyHeight) {
+let a = {x: 1.52, y: 9.45},
+ b = {x: 1.83, y: 10.67},
+ c = (b.y - a.y) / (b.x - a.x);
+    return Math.round((c * bodyHeight + b.y - c * b.x) * 100) / 100;
+}
+```
+*https://www.codewars.com/kata/basic-making-six-toast/train/javascript
+```
+function sixToast(num) {
+  return Math.abs(num-6);
 }
 ```
 
