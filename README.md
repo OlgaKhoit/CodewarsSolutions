@@ -717,7 +717,72 @@ if(age === 1) {
 }
 }
 ```
+*https://www.codewars.com/kata/exclamation-marks-series-number-4-remove-all-exclamation-marks-from-sentence-but-ensure-a-exclamation-mark-at-the-end-of-string/train/javascript
 
+```
+function remove(s){
+let str = "";
+for(let i = 0; i < s.length; i++){
+if(s[i] === "!"){
+} else {
+str += s[i];
+}
+}
+  return str + "!";
+}
+
+ ```
+ *https://www.codewars.com/kata/parse-nice-int-from-char-problem/train/javascript
+ ```
+ function getAge(inputString){
+    return parseInt(inputString);
+ }
+```
+*https://www.codewars.com/kata/vowel-remover/train/javascript
+```
+function shortcut(string){
+let a = string.split('');
+for (let i = string.length-1; i >= 0; i--) {
+if (a[i] === "a"||
+    a[i] === "e"||
+    a[i] === "i"||
+    a[i] === "o"||
+    a[i] === "u") {
+a.splice(i,1);
+}
+};
+string = a.join('');
+   return string;
+}
+```
+*https://www.codewars.com/kata/sort-and-star/train/javascript
+```
+function twoSort(s) {
+let b = s.sort()[0];
+let a = b[0];
+for(let i = 1; i < b.length; i++) {
+a += "***" + b[i];
+  }
+  return a;
+}
+```
+*https://www.codewars.com/kata/exclamation-marks-series-number-6-remove-n-exclamation-marks-in-the-sentence-from-left-to-right/train/javascript
+```
+function remove(s,n){
+let array = s.split(""),
+let count = 0;
+for(let i = 0; i < array.length; i++){
+if(array[i] === "!"){
+count++;
+if(array[i] === '!' && count <= n){
+array.splice(i,1);
+i--;
+}
+}
+}
+  return array.join("");
+}
+```
 
 
 
