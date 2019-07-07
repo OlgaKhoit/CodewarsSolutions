@@ -798,7 +798,50 @@ function sixToast(num) {
   return Math.abs(num-6);
 }
 ```
+*https://www.codewars.com/kata/numerical-palindrome-number-5-1/train/javascript
+```
+function palindrome(num) {
+  if(typeof num !== 'number' || num < 0) return "Not valid";
+  if(num < 10) return false;
+  num = num.toString().split('').sort();
+  console.log(num);
+  let count = 0;
+  for(let i = 0; i < num.length - 1; i){
+   if(num[i] === num[i+1]){
+     count = count + 2;
+     i = i + 2;
+   } else i++;
+  }
+  if(num.length === count || num.length === count +1){
+    return true;
+  } else return false;
+}
 
+```
+```
+function palindrome(num) {
+  if (typeof num !== 'number' || num < 0) return 'Not valid';
+  let cnt = 0;
+  let str = num.toString().split('').sort();
+  if (str.length <= 1) return false;
+  for (let i = 0; i < str.length - 1 ; i++) {
+   if (str[i] === str[i + 1]) {
+     cnt+=2;
+     i++;
+     }
+  }
+  return (str.length - cnt) <= 1 ? true : false;
+}
+```
+*https://www.codewars.com/kata/5a523566b3bfa84c2e00010b
 
-
-
+```
+function minSum(arr) {
+const s = arr.sort((a,b) => a-b)
+let sum = 0;
+for (let i = 0;i < arr.length/2 ;i++){
+sum += s[i] * s[s.length-1-i]
+}
+   return sum
+}
+```
