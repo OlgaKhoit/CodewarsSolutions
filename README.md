@@ -845,3 +845,55 @@ sum += s[i] * s[s.length-1-i]
    return sum
 }
 ```
+*https://www.codewars.com/kata/the-office-v-find-a-chair/train/javascript
+```
+function meeting(x, need){
+if(need <= 0) {
+  return 'Game On';
+}
+const taken = [];
+for(let[{length: chairs}, people] of x){
+let take = Math.min(Math.max(people- chairs, 0), need);
+taken.push(take)
+need -= take;
+if(need <= 0){
+  return taken;
+}
+}
+  return 'Not enough!';
+}
+```
+*https://www.codewars.com/kata/convert-to-binary/train/javascript
+```
+function toBinary(n){
+  return Number(n.toString(2));
+}
+```
+*https://www.codewars.com/kata/get-the-mean-of-an-array/train/javascript
+```
+function getAverage(marks){
+ return Math.floor(marks.reduce((acc, cur) => acc + cur) / marks.length);
+ }
+ ```
+
+ function getAverage(marks){
+
+   let total = 0;
+   for(let i = 0; i < marks.length; i++){
+     total += marks[i];
+   }
+   return Math.floor(total / marks.length);
+ }
+ ```
+ *https://www.codewars.com/kata/55a2d7ebe362935a210000b2/discuss
+ ```
+ class SmallestIntegerFinder {
+ findSmallestInt(args) {
+ let curretMin = args[0];
+ for( let i = 1; i <= args.length; i++) {
+ if(args[i] < curretMin) curretMin = args[i];
+ }
+    return curretMin;
+ }
+ }
+ ```
