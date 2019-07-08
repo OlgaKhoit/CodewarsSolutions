@@ -897,3 +897,40 @@ function getAverage(marks){
  }
  }
  ```
+ *https://www.codewars.com/kata/number-1-matrices-making-an-alternating-sum/train/javascript
+ ```
+ function scoreMatrix(matrix) {
+ let score = 0;
+ matrix.map((e,j) => {
+ if (j%2 === 0){
+    return e.map((v,i) => i % 2 === 0 ? score += v : score -= v)
+ } else {
+     return e.map((v,i) => i % 2 !== 0 ? score += v : score -= v)
+ }
+ })
+     return score;
+ }
+ ```
+ *https://www.codewars.com/kata/count-all-the-sheep-on-farm-in-the-heights-of-new-zealand/train/javascript
+ ```
+ function lostSheep(friday,saturday,total){
+ let sum = 0;
+ for (let i in friday){
+ sum += friday[i];
+ }
+ for (let i in saturday){
+ sum += saturday[i];
+ }
+   return total - sum;
+ }
+ ```
+ *https://www.codewars.com/kata/return-the-first-m-multiples-of-n/train/javascript
+ ```
+ function multiples(m, n){
+ const arr = [];
+ for (let i = 1;i <= m;i++){
+ arr.push(n*i)
+ }
+   return arr
+ }
+ ```
