@@ -934,3 +934,95 @@ function getAverage(marks){
    return arr
  }
  ```
+*https://www.codewars.com/kata/simple-simple-simple-string-expansion/train/javascript
+```
+function stringExpansion(str) {
+let res = '';
+let key = 1;
+for(let i = 0; i < str.length; i++){
+if (str[i] == +str[i]){
+key = +str[i];
+}else{
+res += str[i].repeat(key);
+}
+}
+  return res;
+}
+```
+*https://www.codewars.com/kata/find-the-missing-element-between-two-arrays/train/javascript
+```
+function findMissing(arr1, arr2) {
+let a1 = arr1.sort((a,b) => a-b);
+let a2 = arr2.sort((a,b) => a-b);
+for(let i = 0; i < a1.length; i++) {
+if( a1[i] !== a2[i]) return a1[i]
+ }
+}
+```
+*https://www.codewars.com/kata/sum2total/train/javascript
+```
+function total(arr) {
+if (arr.length == 1) return arr[0]
+let s = []
+for (let i = 0; i < arr.length - 1; i++) {
+s.push(arr[i] + arr[i + 1])
+}
+  return total(s)
+}
+```
+*https://www.codewars.com/kata/splicing/train/javascript
+```
+Array.prototype.removeValue = function(thing) {
+if (this.indexOf(thing) == -1) return false;
+let i ;
+while ((i = this.indexOf(thing)) > -1) this.splice(i,1);
+  return this;
+}
+```
+*https://www.codewars.com/kata/a-gift-well-spent/train/javascript
+```
+let x = 20;
+let arr = [10,34,10];
+var buy = function(x, arr){
+let res = [];
+for (let i = 0; i < arr.length - 1; i++){
+for (let q = i +1; q < arr.length; q++){
+if(arr[i] +arr[q] === x) {
+  return [i, q];
+}
+}
+}
+ return null;
+};
+```
+*https://www.codewars.com/kata/maximum-triplet-sum-array-series-number-7/train/javascript
+```
+function maxTriSum(numbers){
+  let sortedArr = Array.from(new Set(numbers)).sort((a,b) => b-a);
+  return sortedArr[0] + sortedArr[1] + sortedArr[2];
+}
+```
+```
+function maxTriSum(numbers){
+     let set = new Set(numbers);
+     set = [...set].sort((a, b) => b - a);
+     return set[0] + set[1] + set[2];
+   }
+ ```
+ *https://www.codewars.com/kata/array-array-array/train/javascript
+ ```
+ function explode(x){
+ let res = [];
+ let score = 0;
+ for(let i = 0; i < x.length; i++) {
+ if(+x[i]){
+ score +=x[i];
+ }
+ }
+ while (score > 0) {
+ score--;
+ res.push(x);
+ }
+ return res;
+ }
+ ```
