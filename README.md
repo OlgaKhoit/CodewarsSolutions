@@ -1026,3 +1026,68 @@ function maxTriSum(numbers){
  return res;
  }
  ```
+ *https://www.codewars.com/kata/sort-the-odd/train/javascript
+ ```
+ function sortArray(array) {
+   let odd = array.filter(a => a % 2 !== 0).sort((a,b) => a - b);
+   let res = array.map(a => a % 2 !== 0 ? odd.shift() : a);
+   return res;
+ }
+
+```
+*https://www.codewars.com/kata/numerical-palindrome-number-2/train/javascript
+```
+function palindrome(num){
+ if(typeof num !== 'number' || num < 0 || num % 1 != 0){
+  return "Not valid";
+ }
+   if(num < 10){
+    return false;
+   }
+      let str = num + '';
+        for(let i = 0; i < str.length; i++){
+          if(str[i] === str[i + 1]  || str[i] === str[i + 2]) return true;
+     }
+        return false;
+   }
+   ````
+ *https://www.codewars.com/kata/reverseit-1/train/javascript
+ ```
+function reverseIt(data){
+  if (typeof data=== 'string') return data.split('').reverse().join('');
+  if (typeof data === 'number') return data.toString().split('').reverse().join('')*1;
+  return data
+ }
+ ```
+ *https://www.codewars.com/kata/shorter-concat-reverse-longer/train/javascript
+ ```
+ function shorter_reverse_longer(a,b){
+   if (a.length>b.length){return `${b}${a.split('').reverse().join('')}${b}`}
+   if (a.length<b.length){return `${a}${b.split('').reverse().join('')}${a}`}
+   return `${b}${a.split('').reverse().join('')}${b}`
+ }
+ ```
+ *https://www.codewars.com/kata/training-js-number-1-create-your-first-js-function-and-print-helloworld/discuss/javascript
+ ```
+ function squares(x, n) {
+ if (n <= 0) return [];
+ let arr = [x];
+ for (let i=0;i<n-1;i++)
+ {
+ arr.push(Math.pow(arr[i],2))
+ }
+ return arr;
+ }
+ ```
+ *https://www.codewars.com/kata/training-js-number-1-create-your-first-js-function-and-print-helloworld/train/javascript
+ ```
+ function helloWorld(){
+    let str = "Hello World!";
+     console.log("Hello World!");
+     }
+  *https://www.codewars.com/kata/nth-floyd-line/train/javascript
+  ```
+  function nthFloyd(n){
+    return Math.ceil((Math.sqrt(8 * n + 1) - 1) / 2)
+  }
+  ```
