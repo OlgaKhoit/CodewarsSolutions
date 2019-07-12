@@ -1186,5 +1186,42 @@ function usdcny(usd) {
       return t;
     }
     ```
+    *https://www.codewars.com/kata/getnames/train/javascript
+    ```
+    function getNames(data){
+      return data.map(a => a.name);
+      }
+      ```
+ *https://www.codewars.com/kata/esrever/train/javascript
+  ```
+  let reverse = function(array) {
+  let temp = [];
+  for(let i = array.length-1; i >= 0; i--) {
+  temp.push(array[i]);
+  }
+  return temp;
+  }
+  ```
+  *https://www.codewars.com/kata/you-got-change/train/javascript
+  ```
+  function giveChange(num) {
+  let arr = [1, 5, 10, 20, 50, 100];
+  for(let i = arr.length - 1; i >= 0; i--) {
+  let temp = arr[i] * ~~(num/arr[i]);
+  arr[i] = ~~(num/arr[i]);
+  num -= temp;
+  }
+    return arr;
+  }
+  ```
+  *https://www.codewars.com/kata/working-with-arrays-ii-and-why-your-code-fails-in-some-katas
+  ```
+  function removeNthElement(arr, n) {
+  let arrCopy = arr.slice();
+  arrCopy.splice(n, 1);
+    return arrCopy;
+  }
+  ```
+
 
 
