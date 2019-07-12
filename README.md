@@ -1091,3 +1091,61 @@ function reverseIt(data){
     return Math.ceil((Math.sqrt(8 * n + 1) - 1) / 2)
   }
   ```
+  *https://www.codewars.com/kata/string-average/train/javascript
+  ```
+  function averageString(str) {
+    let num = 'zero,one,two,three,four,five,six,seven,eight,nine'.split(',');
+    let arr = str.split(/\s/);
+    let all = arr.map(s=>num.indexOf(s));
+    let avg = all.reduce((a,b)=>a+b,0)/arr.length;
+    let na = 'n/a';
+    return all.some(n=>n<0) ? na : num[Math.floor(avg)] || na;
+  }
+  ```
+  *https://www.codewars.com/kata/numerical-palindrome-number-5-1/train/javascript
+  ```
+  function palindrome(num) {
+  if(typeof num !== 'number' || num < 0) return "Not valid";
+  if( num < 10)  return false;
+  num = num.toString().split('').sort();
+  console.log(num);
+  let count = 0;
+  for(let i = 0; i < num.length - 1; i){
+  if(num[i] === num[i+1]){
+  count = count + 2;
+  i = i + 2;
+  } else i++;
+  }
+  if(num.length === count || num.length === count + 1){
+  return true;
+  }else return false;
+  }
+
+```
+*https://www.codewars.com/kata/calculate-average/train/javascript
+```
+function find_average(array) {
+ let sum = array.reduce((a, b) => a + b, 0);
+  return sum/array.length;
+}
+
+```
+*https://www.codewars.com/kata/5977618080ef220766000022/solutions/javascript
+```
+function usdcny(usd) {
+  return `${(usd*6.75).toFixed(2)} Chinese Yuan`
+  }
+  ```
+  *https://www.codewars.com/kata/short-long-short/train/javascript
+  ```
+  function solution(a, b){
+    return a.length > b.length ? b + a + b : a + b + a;
+  }
+  ```
+  *https://www.codewars.com/kata/return-to-sanity/train/javascript
+  ```
+  function mystery() {
+    return {sanity: 'Hello'};
+  }
+  ```
+
