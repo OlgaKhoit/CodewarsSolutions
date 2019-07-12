@@ -1148,4 +1148,43 @@ function usdcny(usd) {
     return {sanity: 'Hello'};
   }
   ```
+  *https://www.codewars.com/kata/power/train/javascript
+  ```
+  function numberToPower(number, power){
+    return (!power) ? 1 : (power > 1) ? number * numberToPower(number, power-1) : number;
+    }
+    ```
+    *https://www.codewars.com/kata/grasshopper-terminal-game-combat-function-1/train/javascript
+    ```
+    function combat(health, damage) {
+      return (health < damage) ? 0 : (health - damage);
+    }
+    ```
+    *https://www.codewars.com/kata/grasshopper-bug-squashing/train/javascript
+    ```
+    var health = 100
+    var position = 0
+    var coins = 0
+
+    function main () {
+      rollDice()
+      move()
+      combat()
+      getCoins()
+      buyHealth()
+      printStatus()
+    }
+    ```
+    *https://www.codewars.com/kata/maxpossiblescore/train/javascript
+    ```
+    function maxPossibleScore(obj, arr) {
+    let t = 0;
+    arr = arr.map(a => a.toString());
+    for(let x in obj) {
+    t += obj[x] * (arr.includes(x) ? 2: 1);
+    }
+      return t;
+    }
+    ```
+
 
