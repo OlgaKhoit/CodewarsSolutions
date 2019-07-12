@@ -1222,6 +1222,94 @@ function usdcny(usd) {
     return arrCopy;
   }
   ```
+  *https://www.codewars.com/kata/whos-online/train/javascript
+  ```
+  const whosOnline = (friends) => {
+  let obj = {};
+  friends.forEach(friend=>{
+  if(friend.status !== 'offline' && friend.lastActivity > 10){
+  obj['away'] ? '' : obj['away'] = [];
+  obj['away'].push(friend.username);
+  }else {
+  obj[friend.status] ? '' : obj[friend.status] = [];
+   obj[friend.status].push(friend.username);
+  }
+  });
+   return obj;
+  }
+  ```
+  *https://www.codewars.com/kata/whats-my-golf-score/train/javascript
+  ```
+  function golfScoreCalculator(p, s){
+   let r = 0;
+   for (let i = 0; i < p.length; ++i)
+   r += s[i] - p[i];
+     return r;
+  }
+  ```
+  *https://www.codewars.com/kata/57f222ce69e09c3630000212
+  ```
+  const well = x => {
+    const good = x.filter(idea => idea === 'good').length
+  if (good > 2) return 'I smell a series!'
+    if (good > 0) return 'Publish!'
+    return 'Fail!'
+  }
+  ```
+  *https://www.codewars.com/kata/watching-your-pennies
+  ```
+  function manageMoney(cash,expenses,rate) {
+    rate = rate/100
+    for (let i = 0; i <= 11; i++) {
+      cash = ((cash * rate) + cash) - expenses;
+      if(cash <= 0) return 'You ran out of money after ' + i + ' months';
+    }
+    return 'You still have $' + cash.toFixed(2);
+  }
+  ```
+  *https://www.codewars.com/kata/vasya-in-his-free-time/solutions/javascript
+  ```
+  function CalculateString(n, nums) {
+  nums = nums.replace(/01|10/g, '');
+  let l = nums.length;
+    return l === n ? n : CalculateString(l, nums);
+  }
+  ````
+  *https://www.codewars.com/kata/unflatten-a-list-easy
+  ```
+  const unflatten = flatArray => {
+  let arr = [];
+  while (flatArray.length)
+  arr.push(flatArray[0] < 3 ? flatArray.shift() : flatArray.splice(0, flatArray[0]));
+    return arr;
+  };
+  ```
+  *https://www.codewars.com/kata/ultimate-array-reverser
+  ```
+  const ultimateReverse = s => {
+    const arr = [...s.join('')].reverse();
+    return s.map(word => arr.splice(0, word.length).join(''));
+  };
+  ```
+  *https://www.codewars.com/kata/turn-any-word-into-a-beef-taco/train/python
+  ```
+  function tacofy(word) {
+  let arr = ["shell"], obj = {
+  "a" : "beef",
+  "e" : "beef",
+  "i" : "beef",
+  "o" : "beef",
+  "u" : "beef",
+  "t" : "tomato",
+  "g" : "guacamole",
+  "c" : "cheese",
+  "l" : "lettuce",
+  "s" : "salsa"
+  }
+  word = word.toLowerCase().split("").map(a => obj.hasOwnProperty(a) ? obj[a] : null);
+      return arr.concat(word).concat("shell").filter(a => a);
+  }
+  ```
 
 
 
