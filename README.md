@@ -1310,6 +1310,46 @@ function usdcny(usd) {
       return arr.concat(word).concat("shell").filter(a => a);
   }
   ```
+  *https://www.codewars.com/kata/5b190aa7803388ec97000054
+  ```
+  function tram(stops, descending, onboarding){
+  let res = 0, passengers = 0;
+  for(let i = 0; i < stops; i++)
+  res = Math.max(res, passengers += onboarding[i] - descending[i]);
+    return res;
+  }
+  ```
+  *https://www.codewars.com/kata/traffic-police-i/train/javascript
+  ```
+  var speedError = function(est, act, readings) {
+  if ( readings[0][0] < 1 || readings[1][0] < 1 ) throw Error('Invalid reading');
+  if ( readings[0][1] > readings[1][1] ) readings.reverse();
+  let d1 = readings[0][0], d2 = readings[1][0], t = readings[1][1] - readings[0][1];
+  function speed(c){
+  let a = Math.sqrt(Math.abs(Math.pow(d1,2) - Math.pow(c,2))),
+  b = Math.sqrt(Math.abs(Math.pow(d2,2) - Math.pow(c,2))),
+  speed = ((a - b) / t) * 3.6;
+     return Math.abs(Math.round( speed * 1e1 ) / 1e1);
+  }
+    return [speed(est), speed(act)];
+  }
+  ```
+ *https://www.codewars.com/kata/thinking-and-testing-number-37-convert-number/train/javascript
+ ```
+ function testIt(f){
+ let num = Math.round(+((f-32)/9*5)*100)/100
+   return (num >= -273.15) ? num : "Invalid input!";
+ }
+ ```
+ *https://www.codewars.com/kata/thinking-and-testing-retention-and-discard/train/javascript
+ ```
+ function testit(n) {
+ let arr = [];
+ for (let i = 1; i <= n; i += 2)
+ if (n % i === 0) arr.push(i);
+   return arr;
+ }
+ ```
 
 
 
