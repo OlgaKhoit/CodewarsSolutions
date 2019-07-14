@@ -1350,6 +1350,37 @@ function usdcny(usd) {
    return arr;
  }
  ```
+ *https://www.codewars.com/kata/thinking-and-testing-a-and-b/train/javascript
+ ```
+ function testit(a,b){
+   return a | b;
+ }
+ ```
+ *https://www.codewars.com/kata/thinkful-string-drills-repeater/train/javascript
+ ```
+ const repeater = (string, n) => string.repeat(n);
+ ```
+ *https://www.codewars.com/kata/thinkful-list-and-loop-drills-inverse-slicer/train/javascript
+ ```
+function inverseSlice(items, a, b) {
+  return items.filter(function(x,i) {
+    return (i < a || i >= b)
+    }
+  )
+}
+```
+*https://www.codewars.com/kata/the-pony-express/train/javascript
+```
+
+function riders(stations) {
+ let n = 1, x = 0;
+ for(let s of stations)
+ if(x + s > 100)
+ [n, x] =  [n+1, s];
+ else x += s;
+    return n;
+}
+```
 
 
 
