@@ -1381,6 +1381,63 @@ function riders(stations) {
     return n;
 }
 ```
+*https://www.codewars.com/kata/the-poet-and-the-pendulum/train/javascript
+```
+function pendulum(a) {
+let list = [], arr = [];
+a.sort((b, c) => b - c).forEach((e, i) => (i % 2 ? arr : list).push(e));
+  return list.reverse().concat(arr);
+}
+```
+*https://www.codewars.com/kata/the-office-ii-boredom-score/train/javascript
+```
+const boredomScore = {
+  accounts: 1,
+  finance: 2,
+  canteen: 10,
+  regulation: 3,
+  trading: 6,
+  change: 6,
+  IS: 8,
+  retail: 5,
+  cleaning: 4,
+  'pissing about': 25,
+}
+let boredom = staff => {
+let teamScore = Object.values(staff).reduce((total, department) => total + boredomScore[department], 0)
+if (teamScore <= 80) return 'kill me now'
+if (teamScore >= 100) return 'party time!!'
+  return 'i can handle this'
+}
+```
+*https://www.codewars.com/kata/the-ladies-of-eniac/train/javascript
+```
+function radLadies(name){
+  return name.split('').map(function(symbol){
+ let x;
+if (isNaN(symbol) || symbol == ' ') x = symbol;
+    switch (x) {
+      case '%':
+      case '$':
+      case '&':
+      case '/':
+      case '£':
+      case '?':
+      case '@':
+      return '';
+      default:
+      return x;
+}
+}).join('').toUpperCase();
+}
+```
+*https://www.codewars.com/kata/tail-swap/train/javascript
+```
+function tailSwap(arr) {
+let [a, b] = arr.map(s => s.split(':'));
+  return [a[0] + ':' + b[1], b[0] + ':' + a[1]];
+}
+```
 
 
 
