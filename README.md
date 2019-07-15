@@ -1438,6 +1438,88 @@ let [a, b] = arr.map(s => s.split(':'));
   return [a[0] + ':' + b[1], b[0] + ':' + a[1]];
 }
 ```
-
+*https://www.codewars.com/kata/tabs-to-spaces
+```
+*https://www.codewars.com/kata/tiy-fizzbuzz/train/javascript
+```
+function tiyFizzBuzz(s){
+let str='';
+ for (let i=0; i<s.length; ++i){
+ if (s[i]>='A' && s[i]<='Z'){
+ if (s[i]=='A' || s[i]=='E' || s[i]=='I' || s[i]=='O' || s[i]=='U')
+ str+='Iron Yard';
+ else
+ str+='Iron';
+ }
+ else
+ {
+ if (s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u')
+ str+='Yard';
+ else
+ str+=s[i];
+ }
+ }
+  return str;
+}
+```
+*https://www.codewars.com/kata/switcheroo/train/javascript
+```
+function switcheroo(x){
+  return x.split('').map(
+  c => { if(c =='a') return c ='b'; if (c =='b') return c ='a'; return c;
+}).join('');
+}
+```
+*https://www.codewars.com/kata/sweet-dreams-are-made-of-cheese/train/javascript
+```
+function payCheese(arr) {
+let res = 0;
+for (let i = 0; i < arr.length; i++) {
+    res += arr[i];
+}
+  return `£${Math.ceil(res/100)*8.75*4}`;
+}
+```
+*https://www.codewars.com/kata/swap-the-head-and-the-tail/train/javascript
+```
+function swapHeadAndTail(arr) {
+let num = arr.length/2;
+  return arr.slice(Math.round(num)|0).concat(num == (num|0) ? [] : arr[num|0], arr.slice(0,num));
+}
+```
+*https://www.codewars.com/kata/sushi-go-round-beginners/train/javascript
+```
+function totalBill(str) {
+    return (str.replace(/\s/g, "").length * 2) - ~~(str.replace(/\s/g, "").length/5) * 2;
+}
+```
+*https://www.codewars.com/kata/two-sum/train/javascript
+```
+function twoSum(numbers, target) {
+for (let i = 0; i < numbers.length-1; i++)
+for (let j = i+1; j < numbers.length; j++)
+if (numbers[i] + numbers[j] === target) return [i, j];
+}
+```
+*https://www.codewars.com/kata/sums-of-parts/train/javascript
+```
+function partsSums(ls) {
+let arr = [0];
+ls.reverse().forEach(v => arr.push(arr[arr.length-1] + v));
+  return arr.reverse();
+}
+```
+*https://www.codewars.com/kata/sum-number-1/train/javascript
+```
+function sum(num) {
+let a = (num) ? n : 0,
+f = function sum(b) {
+if(isNaN(b)) return a;
+a += b;
+  return sum;
+}
+  return (num) ? f : 0;
+}
+```
 
 
