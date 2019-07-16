@@ -1521,5 +1521,55 @@ a += b;
   return (num) ? f : 0;
 }
 ```
+*https://www.codewars.com/kata/1st-day-of-month-that-are-sunday-in-a-year-range/train/javascript
+```
+function getTotalSundays (yearInit, yearEnd) {
+let num = 0;
+for (let year = yearInit; year <= (yearEnd || yearInit); year++) {
+for (let month = 0; month < 12; month++)
+if ((new Date(year, month, 1)).getDay() === 0)
+num++;
+}
+  return num;
+}
+```
+*https://www.codewars.com/kata/empty-that-array/train/javascript
+```
+function empty(array) {
+array.length = 0;
+  return array;
+}
+```
+*https://www.codewars.com/kata/even-numbers-in-an-array/train/javascript
+```
+function evenNumbers(array, number) {
+  return array.filter(a => a % 2 === 0).slice(-number);
+}
+```
+*https://www.codewars.com/kata/selective-array-reversing/train/javascript
+```
+function selReverse(array, length) {
+let temp = [];
+if(length > array.length) { return array.reverse(); }
+if(!length) { return array; }
+while(array.length) {
+temp = temp.concat(array.splice(0, length).reverse())
+}
+    return temp;
+}
+```
+*https://www.codewars.com/kata/equal-sides-of-an-array/train/javascript
+```
+let findEvenIndex = function(arr) {
+let r = arr.reduce((a,b) => a + b, 0), left = 0;
+for(let i = 0; i < arr.length; i++) {
+if(i > 0) left += arr[i-1];
+r -= arr[i];
+if(left === r) return i;
+}
+  return -1;
+}
+```
+
 
 
