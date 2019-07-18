@@ -1671,6 +1671,38 @@ for(let i = 0; i < iterable.length; i+=1) {
   return iterable.filter( a => a != ' ');
 }
 ```
+*https://www.codewars.com/kata/tribonacci-sequence/train/javascript
+```
+function tribonacci(signature, n) {
+if(n < signature.length) {
+  return (n === 0) ? [] : signature.slice(0, n);
+}
+for(let i = signature.length; i < n; i += 1) {
+signature.push(signature[i - 1] + signature[i - 2] + signature[i - 3]);
+}
+  return signature;
+}
+```
+*https://www.codewars.com/kata/tank-truck/train/javascript
+```
+function tankvol(h, d, vt) {
+let r = d / 2, w = vt / (Math.pow(r, 2) * Math.PI),
+a = (Math.pow(r, 2)) * Math.acos(1 - h / r)
+- (r - h) * Math.sqrt(2 * r * h - Math.pow(h, 2));
+  return w * a | 0;
+}
+```
+*https://www.codewars.com/kata/bugs-life/train/javascript
+```
+function shortestDistance(a, b, c) {
+  return Math.min(
+Math.sqrt(Math.pow(a,2) + (b+c) * (b+c)),
+Math.sqrt(Math.pow(b,2) + (a+c) * (a+c)),
+ Math.sqrt(Math.pow(c,2) + (a+b) * (a+b))
+);
+}
+```
+
 
 
 
