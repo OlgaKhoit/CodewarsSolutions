@@ -1570,6 +1570,67 @@ if(left === r) return i;
   return -1;
 }
 ```
+*https://www.codewars.com/kata/find-number-in-an-array-number-4/train/javascript
+```
+function mostAppear(arr) {
+let index = 0, count = 1;
+for (let i = 1; i < arr.length; i++) {
+(arr[index] === arr[i]) ? ++count : --count;
+if (count === 0) {
+index = i
+count = 1
+}
+}
+  return arr[index];
+}
+```
+
+*https://www.codewars.com/kata/array-squareup-b/train/javascript
+```
+function squareUp(n) {
+let arr = [];
+for (let i = 1; i <= n; i++)
+for (let j = n; j >= 1; j--)
+arr.push(j <= i ? j : 0);
+  return arr;
+}
+```
+*https://www.codewars.com/kata/average-array/train/javascript
+```
+function avgArray(arr){
+let r = [];
+for(let i in arr[0]){
+let num = 0;
+for(let j in arr)
+num += arr[j][i];
+r.push(num/arr.length);
+  }
+return r;
+}
+```
+*https://www.codewars.com/kata/baby-shark-lyrics-generator/train/javascript
+```
+function babySharkLyrics(){
+let newArr = ["Baby shark", "Mommy shark", "Daddy shark", "Grandma shark", "Grandpa shark", "Let's go hunt"];
+  return newArr.map((name)=> `${name},${" doo".repeat(6)}\n`.repeat(3) + `${name}!\n`).join("") + "Run away,…";
+}
+```
+*https://www.codewars.com/kata/zero-plentiful-array/train/javascript
+```
+function zeroPlentiful(arr){
+let zero = 0;
+let s = 0;
+for(let i = 0; i <= arr.length; i++) {
+if(arr[i] === 0) s++;
+else {
+if(s !== 0 && s < 4) { return 0; }
+if(s > 3) { zero++; }
+s = 0;
+}
+}
+  return zero;
+}
+```
 
 
 
