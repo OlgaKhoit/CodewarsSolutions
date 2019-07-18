@@ -1631,6 +1631,46 @@ s = 0;
   return zero;
 }
 ```
+*https://www.codewars.com/kata/player-contact-manager/train/javascript
+```
+function playerManager(players) {
+if (players === null || players.length === 0) return [];
+  let res = [];
+  let arr = players.split(', ');
+    for (let i = 0; i < arr.length; i+=2) {
+      let obj = {
+        player : arr[i],
+        contact : +arr[i + 1]
+      };
+      res.push(obj);
+    }
+  return res;
+}
+```
+*https://www.codewars.com/kata/upside-down-pyramid-addition-dot-dot-dot-reversed/train/javascript
+```
+function reverse(right) {
+let arr = new Array(right.length);
+arr[0] = [right[0]];
+for(let i = 1; i < right.length; i++) {
+arr[i] = [right[i]];
+for(let j = 0; j < arr[i-1].length; j++)
+arr[i].push(arr[i-1][j] - arr[i][j])
+}
+  return arr[arr.length-1].reverse();
+}
+```
+*https://www.codewars.com/kata/unique-in-order/train/javascript
+```
+let uniqueInOrder = function(iterable) {
+if(typeof iterable === 'string') { iterable = iterable.split('') }
+let arr = [], temp = iterable[0];
+for(let i = 0; i < iterable.length; i+=1) {
+(iterable[i+1] === temp && iterable[i+1] !== ' ') ? iterable[i+1] = ' ' : temp = iterable[i+1];
+}
+  return iterable.filter( a => a != ' ');
+}
+```
 
 
 
