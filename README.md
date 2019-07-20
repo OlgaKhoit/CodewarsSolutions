@@ -1702,7 +1702,51 @@ Math.sqrt(Math.pow(b,2) + (a+c) * (a+c)),
 );
 }
 ```
-
-
+*https://www.codewars.com/kata/balanced-number-special-numbers-series-number-1/train/javascript
+```
+function balancedNum(number) {
+let str = '' + number, num = str.length, h = num >> 1;
+let sum = str => str.split('').reduce((a, b) => a + +b, 0);
+  return `${sum(str.slice(0, h - ((num & 1) == 0 ? 1 : 0))) != sum(str.slice(h + 1)) ? 'Not ' : ''}Balanced`;
+}
+```
+*https://www.codewars.com/kata/ball-and-cups/train/javascript
+```
+function cupAndBalls(b, arr){
+for(let i = 0; i < arr.length; i++)
+b = (arr[i][0] === b) ? arr[i][1] : (arr[i][1] === b) ? arr[i][0] : b;
+  return b;
+};
+```
+*https://www.codewars.com/kata/band-name-generator/train/javascript
+```
+let bandNameGenerator = (function(str) {
+  function capitalize(str) { return str[0].toUpperCase() + str.substr(1);}
+  return function (str) {
+    return (str[0] !== str[str.length-1]) ? `The ${capitalize(str)}` : `${capitalize(str + str.substr(1))}`
+  }
+})()
+```
+*https://www.codewars.com/kata/1-slash-n-cycle/train/javascript
+```
+function cycle(n) {
+if (n % 2 == 0 || n % 5 == 0) return -1;
+let i = 0, val = 1;
+while (++i) {
+val = val * 10 % n;
+  if (val == 1) return i;
+  }
+}
+```
+*https://www.codewars.com/kata/ascii-fun-number-1-x-shape/train/javascript
+```
+function x(n) {
+let arr = Array(n).fill().map(_ => "□".repeat(n).split(""))
+for(let i = 0; i < arr.length; i++) {
+[arr[i][i], arr[i][arr.length-1-i]] = ["■","■"];
+}
+    return arr.map(a=>a.join("")).join("\n");
+}
+```
 
 
