@@ -1748,5 +1748,38 @@ for(let i = 0; i < arr.length; i++) {
     return arr.map(a=>a.join("")).join("\n");
 }
 ```
-
-
+*https://www.codewars.com/kata/a-string-of-sorts/train/javascript
+```
+function sortString(string, ordering ) {
+let arr = string.split(""), s = "";
+for (let o of ordering )
+while (arr.includes(o))
+s += arr.splice( arr.indexOf(o), 1 )[0];
+s += arr.join("");
+  return s;
+}
+```
+*https://www.codewars.com/kata/alex-and-snooker-scores/train/javascript
+```
+function frame(score){
+let valid = 0, arr = score.replace(/\(\d+\d*\,\)/, '').split(';');
+for (let i = 0; i < arr.length; i++) {
+let temp  = arr[i].split('-');
+if (parseInt(temp[0]) > parseInt(temp[1]))
+valid++;
+}
+   return [ valid, arr.length-valid];
+}
+```
+*https://www.codewars.com/kata/array-dot-diff/train/javascript
+```
+function array_diff(a, b) {
+for(let i = 0; i < a.length; i +=1) {
+if(b.indexOf(a[i]) > -1) {
+console.log(a);
+a.splice(i, 1, "");
+}
+}
+ return a.filter( a => a);
+}
+```
