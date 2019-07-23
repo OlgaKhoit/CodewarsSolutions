@@ -1774,12 +1774,28 @@ valid++;
 *https://www.codewars.com/kata/array-dot-diff/train/javascript
 ```
 function array_diff(a, b) {
-for(let i = 0; i < a.length; i +=1) {
-if(b.indexOf(a[i]) > -1) {
-console.log(a);
-a.splice(i, 1, "");
-}
-}
- return a.filter( a => a);
+  return a.filter(function(x) { return b.indexOf(x) == -1; });
 }
 ```
+*https://www.codewars.com/kata/array-leaders-array-series-number-3/train/javascript
+```
+let arrayLeaders = number =>number.filter((x,i) => x > number.slice(i + 1).reduce((a,b) => a + b,0));
+
+```
+*https://www.codewars.com/kata/blood-moon/train/javascript
+```
+function bloodMoon(r){
+  return  r*r/4
+}
+```
+*https://www.codewars.com/kata/how-much/train/javascript
+```
+function howmuch(m, n) {
+if(m === n) { return []; }
+let min = Math.min(m,n), max = Math.max(m, n), array = [];
+for(i = min; i <= max; i++){
+if((i-1)/9 % 1 === 0 && (i-2)/7 % 1 === 0)
+array.push(["M: " + i, "B: " + (i-2)/7, "C: " + (i-1)/9])
+}
+    return array;
+}
