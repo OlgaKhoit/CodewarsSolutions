@@ -1835,3 +1835,22 @@ let nameArray = name.split(' ');
 	return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
 }
 ```
+*https://www.codewars.com/kata/they-say-that-only-the-name-is-long-enough-to-attract-attention-they-also-said-that-only-a-simple-kata-will-have-someone-to-solve-it-this-is-a-sadly-story-number-1-are-they-opposite/train/javascript
+```
+function isOpposite(s1,s2){
+if(!s1.length || !s2.length || s1.toUpperCase() !== s2.toUpperCase()) return false;
+for(let i = 0; i < s1.length; i++)
+if(s1[i] === s2[i])
+  return false;
+  return true;
+}
+```
+*https://www.codewars.com/kata/parabolic-arc-length/train/javascript
+```
+function lenCurve(n) {
+  let s = 0;
+  for(let i = 1; i <= n; i++)
+    s += Math.sqrt(Math.pow(1/n,2)+Math.pow(Math.pow(i/n,2)-Math.pow((i-1)/n,2),2));
+  return Number(s.toFixed(9));
+}
+```
