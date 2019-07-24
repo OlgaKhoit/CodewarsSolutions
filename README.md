@@ -1799,3 +1799,39 @@ array.push(["M: " + i, "B: " + (i-2)/7, "C: " + (i-1)/9])
 }
     return array;
 }
+```
+*https://www.codewars.com/kata/array-helpers/train/javascript
+```
+Array.prototype.square = function() {
+  return this.map(n => n * n);
+};
+Array.prototype.cube = function() {
+  return this.map(n => n * n * n);
+};
+Array.prototype.average = function() {
+  return this.reduce((x,y) => x + y, 0) / this.length;
+};
+Array.prototype.sum = function() {
+  return this.reduce((x,y) => x + y, 0);
+};
+Array.prototype.even = function() {
+  return this.filter((n) => n % 2 === 0);
+};
+Array.prototype.odd = function() {
+  return this.filter((n) => n % 2 !== 0);
+};
+```
+*https://www.codewars.com/kata/a-wolf-in-sheeps-clothing/train/javascript
+```
+function warnTheSheep(queue) {
+queue = queue.reverse().indexOf('wolf');
+  return (queue === 0) ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ queue }! You are about to be eaten by a wolf!`;
+}
+```
+*https://www.codewars.com/kata/abbreviate-a-two-word-name/train/javascript
+```
+function abbrevName(name){
+let nameArray = name.split(' ');
+	return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+}
+```
