@@ -1961,4 +1961,32 @@ return false;
 }
 }
   return true;
-}```
+}
+```
+another
+```
+function solve(a,b){
+let c=2;
+ while (b!=1){
+ if (b%c==0){
+ if (a%c!=0)
+   return false;
+ b/=c;
+ c=2
+ }
+ else
+  c++;
+}
+  return true
+};
+```
+*https://www.codewars.com/kata/maximum-multiple/train/javascript
+```
+function maxMultiple(divisor, bound){
+let res = 0;
+  for(let i = divisor; i <= bound; i += divisor){
+   res = i;
+  }
+  return res;
+}
+```
