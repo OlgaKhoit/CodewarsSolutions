@@ -1854,3 +1854,59 @@ function lenCurve(n) {
   return Number(s.toFixed(9));
 }
 ```
+*https://www.codewars.com/kata/persistent-bugger/train/javascript
+```
+function persistence(num) {
+let arr = num.toString().split("");
+let multCount = 0;
+let product;
+while (arr.length > 1) {
+product = arr.reduce(function(a, b) {
+      return a * b;
+});
+multCount++;
+arr = product.toString().split("");
+}
+  return multCount;
+}
+```
+*https://www.codewars.com/kata/pi-approximation/train/javascript
+```
+function iterPi(epsilon) {
+let p = 0;
+let iter = 0;
+let n = 1;
+while (Math.abs(Math.PI - (p * 4)) >= epsilon) {
+p += n/(iter * 2 + 1);
+iter += 1;
+n *= -1;
+}
+  return [iter,  Math.round(p * 4 * 10000000000) / 10000000000];
+}
+```
+*https://www.codewars.com/kata/pinocchios-polygraph/train/javascript
+```
+function extendPinocchioNose(words){
+words = words.toLowerCase().split(" ");
+for(let i = 0; i < words.length-1; i++)
+if(words[i+1].indexOf(words[i]) > -1)
+  return true;
+  return false;
+}
+```
+*https://www.codewars.com/kata/which-are-in/train/javascript
+```
+let inArray = function(array1, array2){
+let arr = [];
+for(let i = 0; i < array1.length; i++){
+let s = array1[i];
+for(let j = 0; j < array2.length; j++){
+if(array2[j].indexOf(s) !== -1){
+arr.push(array1[i]);
+break;
+}
+}
+}
+    return arr.sort();
+}
+```
