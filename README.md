@@ -1910,3 +1910,55 @@ break;
     return arr.sort();
 }
 ```
+*https://www.codewars.com/kata/wilson-primes/train/javascript
+```
+function amIWilson(p) {
+let w = x => x <= 1 ? 1 : x * w(x-1);
+  return (w(p-1) + 1) / (p*p) % 1 === 0;
+}
+```
+*https://www.codewars.com/kata/dominant-array-elements/train/javascript
+```
+function solve(arr){
+  return arr.filter((a, i) => arr.slice(i+1).every(b => b < a));
+}
+```
+*https://www.codewars.com/kata/fixme-replace-all-dots/train/javascript
+```
+let replaceDots = function(str) {
+  return str.replace(/\./g,'-');
+}
+```
+another
+```
+let replaceDots = function(str) {
+for (let i = 0; i < str.length; i++){
+if (str[i]==='.'){
+str= str.replace('.', '-');
+}
+}
+  return str
+}
+```
+*https://www.codewars.com/kata/simple-division/train/javascript
+```
+function solve(a,b){
+let fact =  [];
+for(let i = 1; i <= b; i++){
+if(b % i === 0){
+  fact.push(i);
+}
+}
+let primeFact = fact.filter(function(fact){
+for(let i = 2; i <= Math.sqrt(fact); i++) {
+if (fact % i === 0) return false;
+}
+    return true;
+})
+for(let i = 0; i < primeFact.length; i++){
+if(a % primeFact[i] !== 0){
+return false;
+}
+}
+  return true;
+}```
