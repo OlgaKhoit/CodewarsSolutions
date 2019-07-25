@@ -1990,3 +1990,16 @@ let res = 0;
   return res;
 }
 ```
+*https://www.codewars.com/kata/5583090cbe83f4fd8c000051/solutions/javascript
+```
+function digitize(n) {
+  return ("" + n).split("").reverse().map( x => +x );
+}
+```
+*https://www.codewars.com/kata/a-wolf-in-sheeps-clothing/train/javascript
+```
+function warnTheSheep(queue) {
+  queue = queue.reverse().indexOf('wolf');
+  return (queue === 0) ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ queue }! You are about to be eaten by a wolf!`;
+}
+```
