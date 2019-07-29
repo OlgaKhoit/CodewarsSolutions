@@ -24,6 +24,7 @@ function solution(str) {
  *https://www.codewars.com/kata/count-odd-numbers-below-n/train/javascript
              
 ```
+https://www.codewars.com/kata/sum-of-digits-slash-digital-root/train/javascript
 
 function oddCount(num) {
   var count = 0;
@@ -47,8 +48,24 @@ function getSize(width, height, depth) {
 }
 
 ```
- *https://www.codewars.com/kata/credit-card-issuer-checking/train/javascript
-             
+ *https://www.codewars.com/kata/sum-of-digits-slash-digital-root/train/javascript
+ ```
+function digital_root(n) {
+let array = n.toString().split('');
+if ( array .length === 1) {
+  return n
+}
+while (array .length > 1) {
+let sum = 0;
+for (let i = 0; i < array .length; i++) {
+let el= Number(array [i]);
+sum += el;
+}
+array  = sum.toString().split('')
+}
+	return Number(array [0])
+}
+ ```
              
 ```
 
@@ -2003,3 +2020,67 @@ function warnTheSheep(queue) {
   return (queue === 0) ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ queue }! You are about to be eaten by a wolf!`;
 }
 ```
+*https://www.codewars.com/kata/throwing-darts/train/javascript
+```
+function scoreThrows(radiuses){
+  if(!radiuses.length) { return 0;}
+  let bon = (radiuses.filter(a => a < 5).length === radiuses.length) ? 100 : 0
+  return radiuses.map(a => (a > 10) ? 0 : (a >= 5 && a <= 10) ? 5 : 10).reduce((b,c) => b + c) + bon;
+}
+```
+*https://www.codewars.com/kata/alan-partridge-ii-apple-turnover/train/javascript
+```
+function apple(x){
+  return (Math.pow(x,2) > 1000) ? 'It\'s hotter than the sun!!' : 'Help yourself to a honeycomb Yorkie for the glovebox.';
+}
+```
+*https://www.codewars.com/kata/maximum-multiple/train/java
+```
+public class MaxMultiple {
+  public static int maxMultiple(int divisor, int bound) {
+   int result = 0;
+  for(int i = divisor; i <= bound; i += divisor){
+   result = i;
+  }
+  return result;
+}
+} 
+```
+*https://www.codewars.com/kata/convert-number-to-reversed-array-of-digits/train/java
+```
+public class Kata {
+  public static int[] digitize(long n) {
+        return new StringBuilder().append(n)
+                                  .reverse()
+                                  .chars()
+                                  .map(Character::getNumericValue)
+                                  .toArray();
+  }
+}
+```
+*https://www.codewars.com/kata/remove-anchor-from-url/train/javascript
+```
+function removeUrlAnchor(url){
+let spl = url.split('#');
+    return spl[0];
+}
+```
+*https://www.codewars.com/kata/sum-of-a-sequence/train/javascript
+```
+const sequenceSum = (begin, end, step) => {
+let arr = []
+for (let i=begin; i<=end; i += step){
+arr.push(i)
+}
+  return (arr <= 0)? 0: arr.reduce((a,b )=> a+b)
+};
+```
+*https://www.codewars.com/kata/find-the-unique-number-1/train/javascript
+```
+function findUniq(arr) {
+ arr.sort()
+  return (arr[0] !== arr[1]) ?  arr[0] : arr.pop()
+}
+
+```
+*
