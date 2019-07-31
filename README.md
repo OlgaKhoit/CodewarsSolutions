@@ -77,6 +77,37 @@ function getIssuer(number) {
   return 'Unknown'
 }
 ```
+*https://www.codewars.com/kata/format-a-string-of-names-like-bart-lisa-and-maggie/train/javascript
+```
+function list(names) {
+if (!names) return ''
+if (names.length === 2) return `${names[0].name} & ${names[1].name}`
+  return names
+.map(({ name }) => name)
+.join(', ')
+.replace(/[,](?!.*,)/g, ' &')
+}
+```
+*https://www.codewars.com/kata/thinkful-list-drills-longest-word/train/javascript
+```
+function longest(words) {
+  return words.toString().split(',').sort((a,b) => a.length-b.length ).pop().length
+}
+```
+*https://www.codewars.com/kata/shortest-word/train/javascript
+```
+function findShort(s){
+let  sort = s.split(' ');
+let shortest = Infinity;
+for ( let i = 0; i < sort.length; i++){
+let wordLength = sort[i].length;
+if(wordLength < shortest){
+shortest = wordLength;
+}
+}
+ return shortest
+ }
+```
              
  *https://www.codewars.com/kata/remove-string-spaces/train/javascript
              
@@ -2083,4 +2114,119 @@ function findUniq(arr) {
 }
 
 ```
-*
+*https://www.codewars.com/kata/shortest-word/train/javascript
+```
+function findShort(s){
+let  sort = s.split(' ');
+let shortest = Infinity;
+for ( let i = 0; i < sort.length; i++){
+let wordLength = sort[i].length;
+if(wordLength < shortest){
+shortest = wordLength;
+}
+}
+ return shortest
+ }
+ ```
+ *https://www.codewars.com/kata/reverse-every-other-word-in-the-string/train/javascript
+ ```
+ function reverse(str){
+ let str1 = str.split(" ").map((word,i) => {
+ if( i%2 !==0 ){
+ 	return word.split("").reverse().join("");
+ }
+ 	return word;
+ })
+ 	return str1.join(" ").trim();
+ }
+ ```
+ java
+ ```
+ public static String spinWords(String sentence) {
+     String[] splitWords = sentence.split(" ");
+     String reversedSentence = "";
+     String reversedWord = "";
+     for (String str : splitWords) {
+         if (str.length() >= 5) {
+             for (int i = str.length() - 1; i >= 0; i--)
+                 reversedWord += (str.charAt(i) + " ");
+         }
+     }
+ }
+ ```
+ *https://www.codewars.com/kata/running-average/train/javascript
+ ```
+ function runningAverage() {
+ let arr = [];
+   return function(n) {
+ arr.push(n);
+ let avg = (arr.reduce((a,b) => a + b)/arr.length);
+   return (String(avg % 1).length > 3) ? Math.round(avg*100)/100 : avg;
+ }
+ }
+
+ ```
+ *https://www.codewars.com/kata/collatz-conjecture-3n-plus-1/train/javascript
+ ```
+ let hotpo = function(n){
+ let t = 0;
+ while(n > 1) {
+ n = (n % 2 === 0) ? n/2 : 3 * n + 1;
+ t++;
+ }
+     return t;
+ }
+ ```
+ *https://www.codewars.com/kata/contamination-number-1-string/train/javascript
+ ```
+ function contamination(text, char){
+   return text.replace(/./g, char);
+ }
+ ```
+ another
+ ```
+ function contamination(text, char){
+   let tLength = text.length;
+   let str = '';
+   for(var i = 0 ; i < tLength; i++){
+     str += char;
+   }
+   return str;
+ }
+ ```
+ *https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/train/javascript
+ ```
+ function countPositivesSumNegatives(input) {
+if (input === null || input.length < 1) {
+        return [];
+}
+let array = [0, 0];
+for(let i = 0; i < input.length; i++) {
+if(input[i] <= 0) {
+array[1] += input[i];
+} else {
+array[0] += 1;
+}
+}
+    return array;
+}
+ ```
+*https://www.codewars.com/kata/simple-fun-number-79-delete-a-digit/train/javascript
+```
+function deleteDigit(num) {
+num = String(num);
+for(let i = 0; i < num.length-1; i++){
+if(num[i] < num[i+1] && num[i] !== 0){
+  return +(num.slice(0, i)+ num.slice(i+1))
+}
+}
+for(let i = 0; i < 9; i++){
+let idx =  num.indexOf(String(i))
+if(idx > -1){
+num = num.slice(0, idx) + num.slice(idx+1);
+break;
+}
+}
+  return +num;
+}
+```
