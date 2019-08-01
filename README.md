@@ -2230,3 +2230,92 @@ break;
   return +num;
 }
 ```
+*https://www.codewars.com/kata/bankers-plan/train/javascript
+```
+llet fortune = function(f, p, c, n, i) {
+  for(let year = 0; year < n-1; year++) {
+  c = (!year) ? c : ~~(c + (c * i/100));
+  f = f + ~~(f * p/100);
+  f = (f - c);
+  if(f < 0) { return false; }
+ }
+     return true;
+}
+```
+*https://www.codewars.com/kata/array-manipulation/train/javascript
+```
+function arrayManip(array){
+for (let i = 0;i < array.length;i++){
+let arr1 = [];
+for (let j = i + 1;j < array.length;j++){
+if (array[i] < array[j]) arr1.push(array[j]);
+}
+let min = Math.min(...arr1)
+if (arr1.length > 0){
+array[i] = min
+} else {array[i] = -1};
+arr1 = [];
+}
+    return array
+}
+```
+*https://www.codewars.com/kata/array-comparator/train/javascript
+```
+function matchArrays(v,r) {
+let count = 0;
+for (let i = 0; i < v.length; i++) {
+for (let j = 0; j < r.length; j++) {
+if (r[j] ===v[i] ) {
+count++;
+}
+}
+}
+  return count;
+}
+```
+*https://www.codewars.com/kata/growth-of-a-population/train/javascript
+```
+function nbYear(p0, percent, aug, p) {
+ let count = 0;
+  while (p0 < p) {
+  p0 += p0 * percent/100 + aug;
+  count++;
+}
+   return count;
+}
+```
+*https://www.codewars.com/kata/base-conversion/train/javascript
+```
+function convert(input, source, target) {
+let n = 0;
+let str = '';
+for (let i = 0; i < input.length; i++) {
+n = n * source.length + source.indexOf(input[i]);
+}
+while (n>0) {
+str = target[n % target.length]+str;
+n = Math.floor(n/target.length);
+}
+  return str ? str : target[0];
+}
+```
+*https://www.codewars.com/kata/101-dalmatians-squash-the-bugs-not-the-dogs/train/javascript
+```
+function howManyDalmatians(number){
+if (number <= 10) {
+    return "Hardly any"
+} else if (number <= 50) {
+    return "More than a handful!"
+} else if (number === 101) {
+    return "101 DALMATIANS!!!"
+} else {
+    return "Woah that's a lot of dogs!"
+}
+}
+```
+*https://www.codewars.com/kata/bit-counting/train/javascript
+```
+let countBits = function(n) {
+  return n.toString(2).replace(/0/g,'').length;
+};
+```
