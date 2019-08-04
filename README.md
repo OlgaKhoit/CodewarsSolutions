@@ -2404,3 +2404,13 @@ this.push(array.pop());
   return this;
 };
 ```
+*https://www.codewars.com/kata/arithmetic-sequence/train/javascript
+```
+let nthterm = (first, n, c) => {
+let arr = [first]
+for (let i = 0; i < n; i++) {
+arr.push(arr[i] + c)
+}
+  return arr[n]
+}
+```
