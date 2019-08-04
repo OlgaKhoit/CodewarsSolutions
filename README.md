@@ -2319,3 +2319,88 @@ let countBits = function(n) {
   return n.toString(2).replace(/0/g,'').length;
 };
 ```
+*https://www.codewars.com/kata/bouncing-balls/train/javascript
+```
+function bouncingBall(h,  bounce,  window) {
+let count = 0;
+ if(h > 0 && bounce > 0 && bounce < 1 && window < h){
+  count = 1;
+ }else{
+  return -1;
+ }
+ h = h * bounce;
+ while(h>window){
+ count += 2;
+h=h*bounce;
+}
+return count;
+}
+```
+*https://www.codewars.com/kata/bleatrix-trotter-the-counting-sheep/train/javascript
+```
+function trotter(n) {
+let track = [];
+let sum = [];
+let s = n;
+for(var i = 0; track.length < 10; i++){
+sum = s.toString().split('');
+sum.forEach(function(num) {
+if (track.indexOf(num) == -1) {
+track.push(num);
+}
+});
+s += n;
+}
+  return track.length === 10 ? s - n : "INSOMNIA";
+}
+```
+*https://www.codewars.com/kata/detect-pangram/train/javascript
+```
+function isPangram(str) {
+let letter = []
+let letters = str.toUpperCase()
+for (let i = 0; i < letters.length; i++) {
+let char = letters[i].charCodeAt(0)
+if (char > 64 && char < 91) {
+if (letter.includes(char) === false) {
+letter.push(char)
+}
+}
+}
+ return letter.length === 26 ? true : false
+}
+```
+*https://www.codewars.com/kata/array-element-parity/train/javascript
+```
+function solve(arr){
+  return arr.filter(a => arr.indexOf(-a) === -1)[0];
+};
+```
+*https://www.codewars.com/kata/array-dot-prototype-dot-size/train/javascript
+```
+Array.prototype.size = function() {
+  return this.length;
+};
+```
+*https://www.codewars.com/kata/array-appender/train/javascript
+```
+function appendArrays (arr1, arr2) {
+  return arr1.concat(arr2);
+}
+```
+*https://www.codewars.com/kata/array-arithmetic/train/javascript
+```
+Array.prototype.valueOf = function() {
+  return this.length ? this.reduce((x, y) => x + y) : 0;
+};
+```
+*https://www.codewars.com/kata/array-dot-prototype-dot-reverse/train/javascript
+```
+Array.prototype.reverse = function() {
+let array = this.splice(0);
+while(array.length) {
+this.push(array.pop());
+}
+  return this;
+};
+```
