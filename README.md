@@ -136,7 +136,37 @@ function booleanToString(b) {
   }
 }
 ```
-             
+*https://www.codewars.com/kata/a-disguised-sequence-i/train/javascript
+```
+function fcn (n) {
+let u = [1,2];
+for (let i = 2; i <= n; i ++){
+ u[i] = (6*u[i-2]*u[i-1]/(5*u[i-2]-u[i-1]));
+}
+  return u[n];
+}
+```
+*https://www.codewars.com/kata/adding-ordinal-indicator-suffixes-to-numbers/train/javascript
+```
+function numberToOrdinal(n) {
+let suf = "th";
+if (n == 0) suf = "";
+if (n % 10 == 1 && n % 100 != 11) suf = "st";
+if (n % 10 == 2 && n % 100 != 12) suf = "nd";
+if (n % 10 == 3 && n % 100 != 13) suf = "rd";
+  return n + suf;
+}
+```
+*https://www.codewars.com/kata/array-dot-prototype-dot-push/train/javascript
+```
+Array.prototype.push = function(val) {
+for (let i = 0; i < arguments.length; i++) {
+this[this.length] = arguments[i];
+}
+  return this.length;
+};
+```
+            
 *https://www.codewars.com/kata/reversed-words/train/javascript
              
 ```
@@ -2412,5 +2442,25 @@ for (let i = 0; i < n; i++) {
 arr.push(arr[i] + c)
 }
   return arr[n]
+}
+```
+*https://www.codewars.com/kata/cogs-2/train/javascript
+```
+function cogRpm(c, n) {
+let obj = [1,-1];
+  return [ obj[n % 2] * c[n] / c[0], obj[(c.length - n + 1) % 2] * c[n] / c[c.length-1] ];
+}`
+```
+*https://www.codewars.com/kata/filterevenlengthwords/train/javascript
+```
+```
+function filterEvenLengthWords(words) {
+let arr = [];
+for (let i = 0; i < words.length; i++) {
+if (words[i].length % 2 === 0) {
+arr.push(words[i]);
+}
+}
+  return arr;
 }
 ```
