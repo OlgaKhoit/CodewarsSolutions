@@ -2464,3 +2464,28 @@ arr.push(words[i]);
   return arr;
 }
 ```
+*https://www.codewars.com/kata/between-a-and-b/train/javascript
+```
+function product(a,b){
+let arr = [];
+for (let i = a + 1;i < b;i++){
+arr.push(i)
+}
+if (!arr.length) return 'Error'
+  return arr.reduce((a,b)=>a*b,1)
+}
+```
+*https://www.codewars.com/kata/adjacent-pairs-in-a-string/train/javascript
+```
+function countAdjacentPairs(searchString) {
+let l = searchString.toLowerCase();
+let str = l.split(' ');
+let count= 0;
+for (var i = 0; i < str.length; i++) {
+if (str[i] === str[i+1] && (str[i] !== str[i-1])) {
+count++;
+}
+}
+return count;
+}
+```
