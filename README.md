@@ -2489,3 +2489,118 @@ count++;
 return count;
 }
 ```
+*https://www.codewars.com/kata/alphabetized/train/javascript
+```
+function alphabetized(s) {
+let arr = "";
+for (let i=97; i<123; ++i){
+for (let j=0; j<s.length; j++){
+if (s[j].toLowerCase().charCodeAt()==i){
+  arr += s[j];
+}
+}
+}
+ return arr;
+}
+```
+*https://www.codewars.com/kata/are-they-the-same/train/javascript
+```
+function comp(arr1,arr2){
+if(arr1 === null || arr2 === null){
+  return false;
+}
+if(arr1.length !== arr2.length){
+  return false;
+}
+if(arr1 === [] || arr2 === []){
+ return false;
+}
+for (let i = 0; i < arr1.length; i++){
+if (arr2.indexOf(arr1[i]*arr1[i]) === -1){ 
+    return false;
+}
+}
+for (let j = 0; j < arr1.length; j++){
+if (arr1.indexOf(Math.sqrt(arr2[j])) === -1){ 
+  return false;
+}
+}
+return true;
+}
+```
+*https://www.codewars.com/kata/a-function-to-display-mottos-for-westerosi-houses/train/javascript
+```
+let houses = [  
+  {name: "Targaryen", motto: "Fire and Blood"},
+  {name: "Stark",     motto: "Winter is Coming"},
+  {name: "Bolton",    motto: "Our Blades Are Sharp"},
+  {name: "Greyjoy",   motto: "We Do Not Sow"},
+  {name: "Tully",     motto: "Family, Duty, Honor"},
+  {name: "Arryn",     motto: "As High as Honor"},
+  {name: "Lannister", motto: "Hear Me Roar!"},
+  {name: "Tyrell",    motto: "Growing Strong"},
+  {name: "Baratheon", motto: "Ours is the Fury"},
+  {name: "Martell",   motto: "Unbowed, Unbent, Unbroken"}];
+function motto(name) {
+   const search = houses.find(v => v.name === name)
+   return search ? search.motto : ''
+}
+```
+*https://www.codewars.com/kata/ada-goes-to-coding-bootcamp/train/javascript
+```
+function totalCost(fees, savings, months, monthlyInterest) {
+if (fees<=savings) return fees;
+let pr =(fees-savings)*(monthlyInterest/100)
+let sum = fees
+for (let i=0;i<months;i++){
+sum+=pr;
+}
+return sum;
+}
+```
+*https://www.codewars.com/kata/calculate-is-perfect-square/train/javascript
+```
+function isPerfectSquare(n) {
+  return Math.sqrt(n)===parseInt(Math.sqrt(n));
+}
+```
+*https://www.codewars.com/kata/counting-duplicates/train/javascript
+```
+function duplicateCount(text){
+text = text.toLowerCase();
+let dup = [];
+for (var i=0; i< text.length; i++) {
+if (text.indexOf(text[i])!== i) {
+if (!dup.includes(text[i])) {
+dup.push(text[i]);
+}
+} 
+}
+  return dup.length;
+}
+```
+*https://www.codewars.com/kata/all-star-code-challenge-number-16/train/javascript
+```
+function noRepeat(str) {  
+for(let i of str) if(str.split(i).length == 2) return i;
+}
+```
+*https://www.codewars.com/kata/coding-meetup-number-3-higher-order-functions-series-is-ruby-coming/train/javascript
+```
+function isRubyComing(list) {
+let arr = [];
+for(let i = 0; i < list.length; i++) {
+if(list[i].hasOwnProperty('language')) {
+if(list[i].language === 'Ruby') {
+arr.push(true)
+} else {
+arr.push(false);
+}
+}
+}
+arr = arr.filter(function(x) {
+   return x === true;
+});
+   return arr[0] || false;
+};
+```
