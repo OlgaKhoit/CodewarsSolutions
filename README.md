@@ -2665,3 +2665,24 @@ str += '1';
   return str;
 } 
 ```
+*https://www.codewars.com/kata/stringing-me-along/train/javascript
+```
+function createMessage(str) {
+let str1 = str;
+return f = function(str) {
+if(!str) {
+  return str1;
+} else {
+str1 = str1 + " " + str;
+}
+  return f;
+};
+}
+```
+*https://www.codewars.com/kata/rotate-array-js/train/javascript
+```
+function rotate(array,n) {
+n = n % array.length;
+   return array.slice(-n).concat(array.slice(0, -n));
+}
+```
