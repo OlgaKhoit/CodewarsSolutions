@@ -2616,3 +2616,52 @@ array.push(string);
   return array;
 }
 ```
+*https://www.codewars.com/kata/chain-evaluation/train/javascript
+```
+Number.prototype.add = function(i){ return this + i};
+Number.prototype.subtract = function(i){ return this - i;}
+Number.prototype.multiply = function(i){ return this * i;}
+Number.prototype.divide = function(i){ return this / i;}
+Number.prototype.square = function(){ return this * this;}
+```
+*https://www.codewars.com/kata/are-arrow-functions-odd/train/javascript
+```
+function odds(values){
+ return values.filter(i =>i%2!=0 );
+}
+```
+*https://www.codewars.com/kata/beginner-series-number-3-sum-of-numbers/train/javascript
+```
+function GetSum(a,b) {
+let sum = 0;  
+if (a === b) {
+  return a;
+}
+if (a < b) {
+for (let i = a; i <= b; i++) {
+sum += i;
+}
+  return sum;
+}
+if (b < a) {
+for (let i = b; i <= a; i++) {
+sum += i;
+}
+  return sum;
+}
+}
+```
+*https://www.codewars.com/kata/fake-binary/train/javascript
+```
+function fakeBin(x){
+let str = "";
+for(let i = 0; i < x.length; i++) {
+if(x[i] < 5) {
+str += '0';
+} else if (x[i] >= 5) {
+str += '1';
+}
+} 
+  return str;
+} 
+```
