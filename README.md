@@ -2604,3 +2604,15 @@ arr = arr.filter(function(x) {
    return arr[0] || false;
 };
 ```
+*https://www.codewars.com/kata/dont-rely-on-luck/train/javascript
+```
+let guess = 101;
+Math.random = () => 1;
+```
+*https://www.codewars.com/kata/appending-to-array/train/javascript
+```
+function addWord(array, string) {
+array.push(string);
+  return array;
+}
+```
