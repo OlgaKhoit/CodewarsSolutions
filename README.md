@@ -2719,3 +2719,48 @@ function spEng(sentence){
    return false;
  }
 ```
+*https://www.codewars.com/kata/double-sort/train/javascript
+```
+function dbSort(a){
+let str = a.filter(v => typeof v == "string").sort();
+let num = a.filter(v => typeof v == "number").sort((a,b) => a - b);
+  return num.concat(str);
+}
+```
+*https://www.codewars.com/kata/sequences-and-series/train/javascript
+```
+function getScore(n) {
+ return n * (n + 1) * 25;
+}
+```
+*https://www.codewars.com/kata/take-a-number-and-sum-its-digits-raised-to-the-consecutive-powers-and-dot-dot-dot-eureka/train/javascript
+```
+https://www.codewars.com/kata/take-a-number-and-sum-its-digits-raised-to-the-consecutive-powers-and-dot-dot-dot-eureka/train/javascript
+```
+function sumDigPow(a, b){
+let res = [];
+for(let i = a; i <= b; i++){
+let num = i.toString();
+let sum = 0;
+for (let j = 0; j < num.length; j++){
+sum += Math.pow(Number.parseInt(num[j]),j+1);
+}
+if (sum === i) {
+res.push(i);
+}
+}
+  return res;
+}
+```
+another solution
+```
+function sumDigPow(a, b) {
+let res = [];
+while(a <= b){
+if(a.toString().split('').reduce((x,y,i)=>x + +y ** (i + 1),0) == a)
+res.push(a);
+a++;
+}
+  return res;
+}
+```
