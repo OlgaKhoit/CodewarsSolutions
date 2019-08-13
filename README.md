@@ -2686,3 +2686,36 @@ n = n % array.length;
    return array.slice(-n).concat(array.slice(0, -n));
 }
 ```
+*https://www.codewars.com/kata/round-by-0-dot-5-steps/train/javascript
+```
+function solution(n){
+ return Math.round(n * 2)/ 2;
+}
+```
+*https://www.codewars.com/kata/debug-sum-of-digits-of-a-number/train/javascript
+```
+function getSumOfDigits(integer) {
+   return integer.toString().split('').reduce((a, b) => a+ +b,0)
+}
+```
+*https://www.codewars.com/kata/can-we-divide-it/train/javascript
+```
+function isDivideBy(number, a, b) {
+if (number % a === 0 && number % b === 0) {
+  return true;
+} else {
+  return false;
+}
+} 
+```
+*https://www.codewars.com/kata/do-you-speak-english/train/javascript
+```
+function spEng(sentence){
+ for (let i = 0; i < sentence.length - 6; i++) {
+ if (sentence.slice(i, i + 7).toLowerCase() === 'english') {
+   return true;
+ }
+ }
+   return false;
+ }
+```
