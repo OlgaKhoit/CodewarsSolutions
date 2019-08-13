@@ -2763,4 +2763,20 @@ a++;
 }
   return res;
 }
+
+*https://www.codewars.com/kata/fizzbuzz-array-custom/train/javascript
+```
+var fizzBuzzCustom = function(stringOne ='Fizz', stringTwo ='Buzz', numOne = 3, numTwo = 5) {
+let array = [];
+for (let i=1; i <=100; i++){
+if (i % numOne === 0 && i % numTwo === 0){
+array.push(stringOne + stringTwo)}
+else if (i % numOne === 0){
+array.push(stringOne)}
+else if (i % numTwo === 0){
+array.push(stringTwo)}
+else {array.push(i)}
+}
+  return array
+}; 
 ```
