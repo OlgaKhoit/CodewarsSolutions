@@ -2780,3 +2780,46 @@ else {array.push(i)}
   return array
 }; 
 ```
+*https://www.codewars.com/kata/fold-an-array/train/javascript
+```
+function foldArray(array, runs) {
+if(runs === 0) {
+  return array;
+} else {
+let folded = [];
+let point = Math.ceil(array.length / 2);
+for(let i = 0; i < point; i++) {
+folded[i] = i !== array.length - 1 - i ? array[i] + array[array.length - 1 - i] : array[i];
+}
+  return foldArray(folded, runs - 1);
+}
+}
+```
+*https://www.codewars.com/kata/double-trouble/train/javascript
+```
+function trouble(x, t){
+for(let i = 0; i < x.length; i++) {
+if(x[i] + x[i + 1] === t) {
+x.splice(i+1,1);
+i--;
+}
+}
+  return x;
+}
+```
+*https://www.codewars.com/kata/array-deep-count/train/javascript
+```
+function deepCount(a){
+  return a.reduce((s,e) => s + (Array.isArray(e) ? deepCount(e) : 0),a.length);
+}
+```
+*https://www.codewars.com/kata/bill-and-bobs-secret-language/train/javascript
+```
+function reverse(str){
+let reverse1= "";    
+for (let i = str.length - 1; i >= 0; i--){        
+reverse1 += str[i];
+}    
+  return reverse1;
+}
+```
