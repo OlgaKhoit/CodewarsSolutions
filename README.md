@@ -2816,10 +2816,44 @@ function deepCount(a){
 *https://www.codewars.com/kata/bill-and-bobs-secret-language/train/javascript
 ```
 function reverse(str){
-let reverse1= "";    
-for (let i = str.length - 1; i >= 0; i--){        
-reverse1 += str[i];
-}    
-  return reverse1;
+   return `#${[...str].reverse().join``}#`
+}
+```
+*https://www.codewars.com/kata/complete-the-pattern-number-5-even-ladder/train/javascript
+```
+function pattern(n){
+let output = [];
+for(let i = 1;i <= n;i++){
+if(i % 2 == 0)output.push((''+i).repeat(i));
+}
+ return output.join('\n');
+}
+```
+*https://www.codewars.com/kata/complete-the-pattern-number-6-odd-ladder/train/javascript
+```
+function pattern(n) {
+let output = [];
+let i;
+for(let i = 1; i <= n; i++) {
+if (i % 2 !== 0){
+output.push(Array(i + 1).join(i));
+}
+}
+  return output.join('\n');
+}
+```
+*https://www.codewars.com/kata/compoundarray/train/javascript
+```
+function compoundArray(a, b) {
+let array = [];
+for (let i = 0;i < (a.length > b.length ? a.length : b.length);i++){array.push(a[i])
+array.push(b[i])}
+  return array.filter(v => v != undefined)
+}
+```
+*https://www.codewars.com/kata/is-integer-array/train/javascript
+```
+function isIntArray(arr) {
+  return Array.isArray(arr) && arr.every(function (x) { return Math.floor(x) === x });
 }
 ```
