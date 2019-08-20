@@ -2857,3 +2857,62 @@ function isIntArray(arr) {
   return Array.isArray(arr) && arr.every(function (x) { return Math.floor(x) === x });
 }
 ```
+*https://www.codewars.com/kata/cat-kata-part-1/train/javascript
+```
+function peacefulYard(yard, minDistance) {
+for(var arr = [],i = 0;i < yard.length;i++){
+for(var j = 0;j < yard[0].length;j++){
+if(yard[i][j] != "-"){
+arr.push([i,j]);
+}
+}
+}
+  return arr.every(x => Math.min(...arr.map(y => (Math.pow(x[0]-y[0],2) + Math.pow(x[1]-y[1],2)) || minDistance*minDistance)) >= minDistance*minDistance)
+}
+```
+*https://www.codewars.com/kata/concatenated-sum/train/javascript
+```
+function checkConcatenatedSum(x,y){
+  return x.toString().split('').map(v => v=== '-' ? '' * 1 : v.repeat(y) * 1).reduce((x,y) => x+y) === Math.abs(x)
+}
+```
+*https://www.codewars.com/kata/duck-shoot-easy-version/train/javascript
+```
+function duckShoot(ammo, aim, ducks){
+let shots = Math.floor(ammo * aim);  
+return ducks.replace(/2/g,v => {
+if (shots > 0){
+shots -= 1;
+return 'X';
+} else {
+return v;
+}
+})
+}
+```
+*https://www.codewars.com/kata/drying-potatoes/train/javascript
+```
+function potatoes(p0, w0, p1) {
+  return Math.floor(w0 * (100 - p0) / (100 - p1))
+}
+```
+*https://www.codewars.com/kata/bin-to-decimal/train/javascript
+```
+function binToDec(bin){
+  return parseInt(bin,2);
+}
+```
+*https://www.codewars.com/kata/brownrw8-s-for-loop/train/javascript
+```
+let nums = [];
+for(let i = 1;i <= 5;i++){
+  nums.push(i);
+}
+```
+*https://www.codewars.com/kata/easy-wallpaper/train/javascript
+```
+function wallpaper(l, w, h) {
+let num = ['zero', 'one', 'two', 'three', 'four', 'five','six', 'seven', 'eight', 'nine', 'ten', 'eleven','twelve', 'thirteen', 'fourteen', 'fifteen','sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+    return w * h * l === 0 ? num[0] : num[Math.ceil((l * h * 2 + w * h * 2) * 1.15 / 5.2)];
+}
+```
