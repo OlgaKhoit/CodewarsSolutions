@@ -2916,3 +2916,34 @@ let num = ['zero', 'one', 'two', 'three', 'four', 'five','six', 'seven', 'eight'
     return w * h * l === 0 ? num[0] : num[Math.ceil((l * h * 2 + w * h * 2) * 1.15 / 5.2)];
 }
 ```
+*https://www.codewars.com/kata/circularly-sorted-array/train/javascript
+```
+function isCircleSorted( arr ){
+let count = 0;
+for (let i = 0; i < arr.length; i++) {
+if (arr[i] > arr[(i + 1) % arr.length]) {
+count++;
+}
+}
+    return count === 1;
+}
+```
+*https://www.codewars.com/kata/clocky-mc-clock-face/train/javascript
+```
+var whatTimeIsIt = function(angle) {
+console.log(angle);
+ let mins = angle*2;
+ let hour = Math.floor(mins / 60);
+ let s = Math.floor(mins % 60);
+  if (hour ==0) {
+  hour = "12";
+  }
+  if (hour <10) {
+  hour = "0"+ hour;
+  }
+  if (s < 10) {
+  s = "0"+ s;
+  }
+  return hour + ":" + s;
+}
+```
