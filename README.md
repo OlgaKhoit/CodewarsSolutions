@@ -2947,3 +2947,28 @@ console.log(angle);
   return hour + ":" + s;
 }
 ```
+*https://www.codewars.com/kata/dubstep/train/javascript
+```
+function songDecoder(song) {
+let arr =[];
+let str = song.split("WUB");
+for (let i=0; i<str.length; i++){
+if (str[i] !== "") {
+arr.push(str[i]);
+}
+}
+  return arr.join(" ");
+}
+```
+*https://www.codewars.com/kata/duplicate-arguments/train/javascript
+```
+function solution(...array){
+  return [...new Set(array)].length != array.length
+}
+```
+*https://www.codewars.com/kata/every-archer-has-its-arrows/train/javascript
+```
+function archersReady(archers){
+   return archers.length ? archers.every(v => v >= 5):false;
+}
+```
