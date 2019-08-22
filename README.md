@@ -2972,3 +2972,72 @@ function archersReady(archers){
    return archers.length ? archers.every(v => v >= 5):false;
 }
 ```
+*https://www.codewars.com/kata/extract-the-ids-from-the-data-set/train/javascript
+```
+function extractIds(data){
+  return [].concat(...Object.keys(data).map(function(items) {
+  return items === 'id' ? data[items] : extractIds(data[items]);
+}))
+}
+```
+*https://www.codewars.com/kata/every-nth-array-element-basic/train/javascript
+```
+function every(arr1, interval, start){
+interval = interval || 1;
+let arr = [];
+for(let i = 0;i < arr1.length;i++){
+if (i % interval === 0){
+arr.push(arr1[i + (start || 0)]);
+}
+}
+   return arr.filter(v => v !== undefined);
+}
+```
+*https://www.codewars.com/kata/csv-representation-of-array/train/javascript
+```
+function toCsvText(arr) {
+  return arr.join('\n');
+}
+```
+*https://www.codewars.com/kata/get-planet-name-by-id/train/javascript
+```
+function getPlanetName(id){
+let name;
+switch(id){
+case 1:
+ name = 'Mercury'
+ break;
+case 2:
+ name = 'Venus'
+ break;
+case 3:
+ name = 'Earth'
+ break;
+case 4:
+  name = 'Mars'
+ break;
+case 5:
+  name = 'Jupiter'
+  break;
+case 6:
+  name = 'Saturn'
+  break;
+case 7:
+  name = 'Uranus'
+  break;
+case 8:
+  name = 'Neptune'
+}
+   return name;
+}
+```
+*https://www.codewars.com/kata/feynmans-square-question/train/javascript
+```
+function countSquares(n){
+let number = 0;
+for (let i = 0;i <= n;i++){
+number +=(n - i) ** 2
+}
+  return number;
+}
+```
