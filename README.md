@@ -3041,3 +3041,39 @@ number +=(n - i) ** 2
   return number;
 }
 ```
+*https://www.codewars.com/kata/financing-plan-on-planet-xy140z-n/train/javascript
+```
+function finance(n) {
+   let sum = 0;
+ 	let current_sum;
+ 	for (let i = 0; i <= n; i ++){ 
+ 		current_sum= (2 * i + 2 * i + (n - i)) * (n + 1 - i) / 2
+ 		sum += current_sum}
+ 	return sum;
+ }
+```
+*https://www.codewars.com/kata/financing-a-purchase/train/javascript
+```
+function amort(rate, bal, t, n) {
+rate /= 1200; 
+let c=rate * bal/(1-(1 + rate)**(-t));
+for(let i = 1; i < n; i++) bal -= (c-rate * bal);
+  return `num_payment ${n.toFixed(0)} c ${c.toFixed(0)} princ ${(c-rate * bal).toFixed(0)} int ${(rate * bal).toFixed(0)} balance ${(bal-(c-rate * bal)).toFixed(0)}`;
+}
+```
+*https://www.codewars.com/kata/find-the-parity-outlier/train/javascript
+```
+function findOutlier(integers){
+let even = integers.filter(function(num) {
+  return num % 2 === 0;
+});
+let odd = integers.filter(function(num) {
+  return num % 2 !== 0;
+});
+if (even.length === 1) {
+  return even[0];
+} else {
+  return odd[0];
+}
+}
+```
