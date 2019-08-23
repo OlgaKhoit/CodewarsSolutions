@@ -3077,3 +3077,51 @@ if (even.length === 1) {
 }
 }
 ```
+*https://www.codewars.com/kata/find-the-mine/train/javascript
+```
+function mineLocation(field){
+let x;
+let y;
+for(let i = 0; i < field.length; i++){
+x = i;
+y = field[i].indexOf(1);
+if(y != -1)
+    break
+}
+  return [x,y]
+}
+```
+*https://www.codewars.com/kata/find-the-nexus-of-the-codewars-universe/train/javascript
+```
+
+function nexus(users) {
+let obj1 = Object.keys(users)
+let obj2 = Object.values(users)
+let arr = obj1.map((v, i) => Math.abs(v * 1 - obj2[i]))
+let index = arr.indexOf(Math.min(...arr.map(v => Math.abs(v))))
+  return obj1[index]*1
+}
+```
+*https://www.codewars.com/kata/find-the-missing-letter/train/javascript
+```
+function findMissingLetter(arr) {
+  return String.fromCharCode(arr.find((i,j) => arr[j + 1].charCodeAt()-i.charCodeAt()!==1).charCodeAt()+1)
+}
+```
+*https://www.codewars.com/kata/find-the-odd-int/train/javascript
+```
+function findOdd(A) { 
+let sum = 0;
+for(let i = 0; i < A.length; i++) {
+ for(var j = 0; j < A.length; j++) {
+if(A[i] == A[j]) {
+sum++;
+}
+}
+if (sum % 2 !== 0) {
+    return A[i];
+}
+}
+sum = 0;
+}
+```
