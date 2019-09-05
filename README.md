@@ -3125,3 +3125,31 @@ if (sum % 2 !== 0) {
 sum = 0;
 }
 ```
+*https://www.codewars.com/kata/find-the-missing-term-in-an-arithmetic-progression/train/javascript
+```
+var findMissing = function (list) {  
+  return ((list[0] + list[list.length - 1]) * (list.length + 1))/ 2 - (list.reduce((a,b) => a + b));
+}
+```
+*https://www.codewars.com/kata/find-within-array/train/javascript
+```
+let findInArray = function(arr, iter) {
+  return arr.map((v,i) => iter(v,i)).indexOf(true)
+};
+```
+*https://www.codewars.com/kata/grouped-by-commas/train/javascript
+```
+function groupByCommas(n) {
+let stringArr = (n.toString()).split("");
+for (let i = stringArr.length; i >= 0; i = i - 3) {
+stringArr.splice([i], 0, ",");
+}
+if (stringArr[stringArr.length -1] === ",") {
+stringArr.pop();
+}
+if (stringArr[0] == [","]) {
+stringArr.shift();
+}
+return stringArr.join("");
+}
+```
