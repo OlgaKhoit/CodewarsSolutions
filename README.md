@@ -3153,3 +3153,70 @@ stringArr.shift();
 return stringArr.join("");
 }
 ```
+*https://www.codewars.com/kata/handshake-problem/train/javascript
+```
+function getParticipants(handshakes){
+for(var i = 0,j = 1;i < handshakes; i+= j++);
+  return j;
+}
+```
+*https://www.codewars.com/kata/holy-cats/train/javascript
+```
+function holycats(input){
+  return input.filter(n => n !='wicked').filter(n => n != 'normal')
+}
+```
+*https://www.codewars.com/kata/hard-time-bomb/train/javascript
+```
+var wireCode = global[Object.keys(global).filter(n => (typeof global[n] === 'number'))];
+Bomb.CutTheWire(wireCode);
+```
+*https://www.codewars.com/kata/point-in-polygon-1/train/javascript
+```
+
+function pointInPoly(poly, point) {
+let count = poly.length;
+let [x, y] = point;
+let inside = false;
+for (let i = 0, xi, yi, xj, yj, inter, j = count - 1; i < count; j = i++) {
+[xi, yi] = poly[i];
+[xj, yj] = poly[j];
+if (((yi > y) != (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)) 
+inside = !inside;
+}
+  return inside;
+}
+```
+*https://www.codewars.com/kata/pizza-pieces/train/javascript
+```
+function maxPizza(cut) {
+if (cut < 0){
+ return -1;
+} else {
+if (cut == 0){ 
+  return 1;
+}
+}
+    return (cut*(cut+1)/2)+1;
+}
+```
+*https://www.codewars.com/kata/primorial-of-a-number/train/javascript
+```
+function numPrimorial(n){
+let array = [];
+for (let i = 1; ; i++){
+if (n === array.length){
+ break;
+}
+if (isPrime(i)) array.push(i)
+}
+  return array.reduce((a,b)=>a*b,1)
+}
+function isPrime(n) {
+let f = Math.sqrt(n);
+for(let i = 2; i <= f; i++) {
+if(n % i === 0) return false; 
+}
+  return n !== 1;
+}
+```
