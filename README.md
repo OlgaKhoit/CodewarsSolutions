@@ -3235,3 +3235,52 @@ function game(n) {
   return n%2==0?[(n/2)*n]:[n**2, 2];
 }
 ```
+*https://www.codewars.com/kata/playing-with-digits/train/javascript
+```
+function digPow(n, p){
+let str = n.toString();
+let len = str.length;
+let res = 0;
+for(let i = 0; i < len ; i++) {
+let num = parseInt(str.charAt(i),10);
+res +=  Math.pow(num, p + i);
+}
+let x = Math.pow(n, p);
+if(res === x){
+  return p;
+} else if(res % n === 0) {
+  return res / n;
+} else {
+  return -1;  
+}
+}
+```
+*https://www.codewars.com/kata/points-in-the-circle/train/javascript
+```
+function pointsNumber(r){
+let point = 0
+for (let i = -r; i <= r; i++){
+for (let j = -r; j <= r; j++){
+if (i * i + j * j <= r * r){
+point++;
+}
+}
+}
+  return point;
+}
+```
+*https://www.codewars.com/kata/positions-average/train/javascript
+```
+function posAverage(s) {
+let comps = 0;
+let count = 0;
+const array = s.split`, `;
+for (let i = 0; i <array.length - 1; i++){
+for (let j = i + 1; j < array.length; j++){
+let temp = array[j].split``;
+array[i].split``.map((v,z) => v === temp[z] ? comps++ : count++);
+}
+}
+    return comps / (count + comps) * 100;
+}
+```
