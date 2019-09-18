@@ -3220,3 +3220,18 @@ if(n % i === 0) return false;
   return n !== 1;
 }
 ```
+*https://www.codewars.com/kata/5616868c81a0f281e500005c/solutions/javascript
+```
+function rank(st, we, n) {
+let array = st.toLowerCase().split`,`.map((v,i) => (v.split``.map(v => v.charCodeAt()-96).reduce((a,b) => a + b,0) + v.length) * we[i])
+const names = st.split`,`.map((v,i) => [array[i],v]).sort((a,b) => a[0] === b[0]?a[1].localeCompare(b[1]) : b[0] - a[0])
+if (!st.length) return "No participants"
+  return names[n-1] ? names[n-1][1]:"Not enough participants"
+}
+```
+*https://www.codewars.com/kata/playing-on-a-chessboard/train/javascript
+```
+function game(n) {
+  return n%2==0?[(n/2)*n]:[n**2, 2];
+}
+```
