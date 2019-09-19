@@ -3284,3 +3284,26 @@ array[i].split``.map((v,z) => v === temp[z] ? comps++ : count++);
     return comps / (count + comps) * 100;
 }
 ```
+*https://www.codewars.com/kata/prefill-an-array/train/javascript
+```
+function prefill(n, v){
+if (parseInt(n) !== Math.abs(n)) throw new TypeError(`${n} is invalid`);
+  return +n ? Array(n).fill(v) : [];
+}
+```
+*https://www.codewars.com/kata/rank-vector/train/javascript
+```
+function ranks(a) {
+let sort = a.slice().sort((a,b) => b - a);
+  return a.map(v => sort.indexOf(v) + 1);
+}
+```
+*https://www.codewars.com/kata/reach-me-and-sum-my-digits/train/javascript
+```
+function sumDigNthTerm(initval, patternl, nthterm) {
+for(let i = 0; i < nthterm - 1; i++){
+initval += patternl[i % patternl.length]
+}
+  return String(initval).split(``).reduce((a, b) => a + b * 1, 0);
+}
+```
