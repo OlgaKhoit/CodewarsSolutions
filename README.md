@@ -3390,3 +3390,49 @@ ring += ter[1]
   return ring;
 }
 ```
+*https://www.codewars.com/kata/valid-braces/train/javascript
+```
+function validBraces(braces){
+let mat = { '(':')', '{':'}', '[':']' };
+let st = [];
+let char;
+for (let i = 0; i < braces.length; i++){
+char = braces[i];
+if (mat[char]) {
+st.push(char);
+} else { 
+if (char !== mat[st.pop()]){
+  return false;
+}
+}
+}
+return st.length === 0; 
+}
+```
+*https://www.codewars.com/kata/vasya-clerk/train/javascript
+```
+function tickets(peopleInLine){
+let a = 0;
+let b = 0;
+for(let i = 0; i < peopleInLine.length; i++){
+if(peopleInLine[i] == 25){
+a += 1;
+}
+if(peopleInLine[i] == 50){
+a -= 1; b += 1;
+}
+if(peopleInLine[i] == 100){
+if(b == 0 && a >= 3){
+a -= 3;
+}else{
+a -= 1;
+b -= 1;
+}
+}
+if(a < 0 || b < 0){
+  return 'NO';
+}
+}
+  return 'YES';
+}
+```
