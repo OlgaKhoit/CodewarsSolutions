@@ -3338,3 +3338,23 @@ num1 = rules[(i-1)%rules.length](num1,numbers[i])
   return num1;
 }
 ```
+*https://www.codewars.com/kata/regex-tic-tac-toe-win-checker/train/javascript
+```
+function regexTicTacToeWinChecker(board) {
+let newB = board.slice(0,3) + ' ' + board.slice(3,6) + ' ' + board.slice(6);
+if (/XXX|X...X...X|X....X....X|X..X..X/.test(newB)) {
+  return true;
+} else if (/OOO|O...O...O|O....O....O|O..O..O/.test(newB)) {
+  return true;
+} else {
+  return false;
+}
+}
+```
+*https://www.codewars.com/kata/regexp-basics-is-it-ipv4-address/train/javascript
+```
+String.prototype.ipv4Address = function() {
+  return /^(?:(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])(\.(?!$)|$)){4}$/
+.test(this);
+}
+```
