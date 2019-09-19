@@ -3307,3 +3307,34 @@ initval += patternl[i % patternl.length]
   return String(initval).split(``).reduce((a, b) => a + b * 1, 0);
 }
 ```
+*https://www.codewars.com/kata/rectangle-into-squares/train/javascript
+```
+function sqInRect(lng, wdth){
+let arr = [];
+if(lng === wdth){
+  return null;
+}
+if(wdth > lng){
+let mid = wdth;
+wdth=lng;
+lng=mid;
+}
+while(lng > 0 && wdth > 0){
+arr.push(wdth);
+let l = lng;
+lng = (lng - wdth) >= wdth ? (lng-wdth) : wdth;
+wdth = lng === wdth ? (l-wdth) : wdth;
+}
+  return arr;
+}
+```
+*https://www.codewars.com/kata/reducing-by-rules-to-get-the-result/train/javascript
+```
+function reduceByRules(numbers, rules){ 
+let num1 = rules[0](numbers[0],numbers[1]);  
+for (let i = 2; i < numbers.length; i++){
+num1 = rules[(i-1)%rules.length](num1,numbers[i])
+}
+  return num1;
+}
+```
