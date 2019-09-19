@@ -3358,3 +3358,35 @@ String.prototype.ipv4Address = function() {
 .test(this);
 }
 ```
+*https://www.codewars.com/kata/return-1-2-3-randomly/train/javascript
+```
+function one_two_three() {
+let num = 2 * one_two() + one_two() - 2
+while (![1,2,3].some(v => v === num)){
+num = 2 * one_two() + one_two() - 2;
+}
+return num;
+}
+```
+*https://www.codewars.com/kata/santas-master-plan/train/javascript
+```
+function getAttendees (peopleInvited, responses){
+  return peopleInvited.filter(function (name) {
+  return !responses.some(function (response) {
+  return response.name === name && response.response === 'declined';
+});
+});
+}
+```
+*https://www.codewars.com/kata/word-mesh/train/javascript
+```
+function wordMesh(arr){
+let ring = "";
+for(let i = 0; i < arr.length - 1; i++){
+let ter = (arr[i]+ " " + arr[i + 1]).match(/(.+) \1/);
+if(!ter) return "failed to mesh";
+ring += ter[1]
+}
+  return ring;
+}
+```
