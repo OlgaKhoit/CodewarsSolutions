@@ -3479,3 +3479,41 @@ point++;
   return point === name.length;
 }
 ```
+*https://www.codewars.com/kata/who-won-the-election/train/javascript
+```
+function getWinner(listOfBallots) {
+let wins = listOfBallots.length/2;
+let object = {};
+listOfBallots.map(v => object[v] = object[v] ? object[v]+1:1);
+for (let vote in object) {
+if (object[vote] > wins) {
+return vote;
+}
+}
+  return null;
+}
+```
+*https://www.codewars.com/kata/your-ride-is-here/train/javascript
+```
+function ride(group,comet){
+let group1 = group.split``.reduce((a,b) => a*(b.charCodeAt()-64),1) % 47;
+let comet1 = comet.split``.reduce((a,b) => a*(b.charCodeAt()-64),1) % 47;
+  return group1 === comet1 ? 'GO':'STAY';
+}
+```
+*https://www.codewars.com/kata/run-length-encoding/train/javascript
+```
+let runLengthEncoding = function(str){
+const array = [];
+let v = 1;
+for (let i=0;i<str.length;i++){
+if (str[i]!==str[i+1]){
+array.push([v,str[i]]);
+v = 1;
+} else {
+v++;
+}
+}
+  return array;
+}
+```
