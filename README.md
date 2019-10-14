@@ -3517,3 +3517,19 @@ v++;
   return array;
 }
 ```
+*https://www.codewars.com/kata/mexican-wave/train/javascript
+```
+function wave(n){
+let arrFin = [];
+for (let i = 0; i < n.length; i++) {
+let array = n.split('');
+if ( array[i] === ' ') { 
+continue;
+}
+array[i] = array[i].toUpperCase();
+console.log(array);
+arrFin.push(array.join(''));
+}
+    return arrFin
+}
+```
