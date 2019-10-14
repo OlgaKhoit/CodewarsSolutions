@@ -3533,3 +3533,23 @@ arrFin.push(array.join(''));
     return arrFin
 }
 ```
+*https://www.codewars.com/kata/midpoint-sum/train/javascript
+```
+var midpointSum = function(n){
+for (let i = 0;i < n.length;i++){
+if (n.slice(0,i).reduce((a,b) => a + b,0) === n.slice(i+1).reduce((a,b) => a + b,0)){
+if (i===0||i===n.length-1){
+  return undefined;
+}
+  return i;
+}
+}
+};
+```
+*https://www.codewars.com/kata/meeting/train/javascript
+```
+function meeting(s) {
+  return s.replace(/;/gi,' ').split(' ').map(v => v.split(':').reverse().join(', ').toUpperCase()).sort()
+.map(v => '('+v+')').join('');
+}
+```
