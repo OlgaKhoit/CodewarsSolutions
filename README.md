@@ -3436,3 +3436,46 @@ if(a < 0 || b < 0){
   return 'YES';
 }
 ```
+*https://www.codewars.com/kata/weird-string-case/train/javascript
+```
+function toWeirdCase(string) {
+  return string
+.split(' ')
+.map(word =>
+word
+.split('')
+.map(
+(characters,  indexed) =>
+ indexed % 2 === 0 ? characters.toUpperCase() : characters.toLowerCase()
+)
+.join('')
+)    
+.join(' ')
+}
+```
+*https://www.codewars.com/kata/vowel-shifting/train/javascript
+```
+function vowelShift(text, n) {
+if (typeof text !== 'string') return text;
+if (!/[aeiou]/gi.test(text)) return text;
+let array = text.match(/[aeuoi]/gi).join``;
+let shift = (array.slice(-n % array.length) + array.slice(0,-n % array.length)).split``;
+let i = 0;
+  return text.replace(/[aeuoi]/gi,v => shift[i++]);
+}
+```
+*https://www.codewars.com/kata/whats-in-a-name/train/javascript
+```
+function nameInStr(str, name){
+str = str.toLowerCase();
+name = name.toLowerCase();
+let array = str.split``.filter(v=>name.includes(v));
+let point = 0;
+for (let i = 0; i < array.length; i++){
+if (array[i] === name[point]){
+point++;
+}
+}
+  return point === name.length;
+}
+```
