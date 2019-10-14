@@ -3553,3 +3553,22 @@ function meeting(s) {
 .map(v => '('+v+')').join('');
 }
 ```
+*https://www.codewars.com/kata/make-the-deadfish-swim/train/javascript
+```
+function parse(data){
+let resp = [];
+let num = 0;
+data.split("").forEach(function(value) {
+if (value == "d") {
+num--;
+} else if (value == "i") {
+  num ++;
+} else if (value == "s") {
+num = num*num;
+} else if (value == "o") {
+resp.push(num);
+}
+});
+return resp;
+}
+```
