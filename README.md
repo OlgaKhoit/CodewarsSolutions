@@ -3674,3 +3674,36 @@ while (i.next && i.data === i.next.data) i.next = i.next.next;
   return head;
 }
 ```
+*https://www.codewars.com/kata/kebabize/train/javascript
+```
+function kebabize(str) {
+let uppCase = 'ABCDEGFHIJKLMNOPQRSTUVWXYZ';
+let alph = uppCase + uppCase.toLowerCase();
+let str1 = '';
+for (let i = 0; i <str.length; i++){
+if (uppCase.indexOf(str[i]) !== -1){
+str1 += '-' + str[i].toLowerCase();
+} else if(alph.indexOf(str[i]) !== -1){
+str1 += str[i].toLowerCase();
+} 
+}
+if (str1[0] === '-'){
+    return str1.slice(1);
+}
+    return str1;
+}
+```
+*https://www.codewars.com/kata/is-a-number-prime/train/javascript
+```
+function isPrime(num){
+if(num < 2){
+  return false;
+}
+for (let i = 2; i < num; i++){
+if(num % i === 0){
+  return false;
+}
+}
+  return true;
+}
+```
