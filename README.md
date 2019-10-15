@@ -3572,3 +3572,53 @@ resp.push(num);
 return resp;
 }
 ```
+*https://www.codewars.com/kata/lowest-product-of-4-consecutive-numbers/train/javascript
+```
+function lowestProduct(input) { 
+let array = [];
+if (input.length < 4) return "Number is too small";
+for (let i = 0; i < input.length-3; i++) {
+array.push(input.slice(i, i + 4).split('').map(a => +a).reduce((a, b) => a * b,1));
+}
+  return Math.min(...array);
+}
+```
+*https://www.codewars.com/kata/lottery-ticket/train/javascript
+```
+function bingo(ticket, win){
+   return ticket.reduce((a,b) => {
+for(let i = 0; i < b[0].length; i++) {
+console.log(b[0][i], b[0].charCodeAt(i) === b[1]);
+if (b[0].charCodeAt(i) === b[1]) {
+a.push(b[1]);
+ break;
+}
+}
+ return a;
+}, []).length >= win ? 'Winner!' : 'Loser!';
+}
+```
+*https://www.codewars.com/kata/loose-change/train/javascript
+```
+function looseChange(cents){
+cents = Math.floor(cents);
+let object = {'Nickels': 0, 'Pennies': 0, 'Dimes': 0, 'Quarters': 0};
+ while (cents >= 25){
+cents -= 25;
+object.Quarters++;
+}
+ while (cents >= 10){
+cents -= 10;
+object.Dimes++;
+}
+ while (cents >= 5){
+cents -= 5;
+object.Nickels++;
+}
+while (cents >= 1){
+cents -= 1;
+object.Pennies++;
+}
+  return object;
+}
+```
