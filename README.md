@@ -3622,3 +3622,55 @@ object.Pennies++;
   return object;
 }
 ```
+*https://www.codewars.com/kata/look-and-say-numbers/train/javascript
+```
+function lookAndSay(data,len){
+const seqn = [];
+let num = data;
+ while (len) {
+const nextNum = [];
+let numArr = num.split('');
+let count = 1;
+for (let i = 0; i < numArr.length; i++){
+if (numArr[i] === numArr[i + 1]){
+count++;
+} else {
+nextNum.push(...[count, numArr[i]]);
+count = 1;
+}
+}
+num = nextNum.join('');
+seqn.push(num);
+len--;
+}
+  return seqn;
+}
+
+```
+*https://www.codewars.com/kata/linked-lists-insert-nth-node/train/javascript
+```
+function Node(data){
+  this.data = data;
+  this.next = null;
+}
+function insertNth(head, index, data){
+if (index == 0){
+  return push(head, data);
+}
+head.next = insertNth(head.next, index - 1, data);
+  return head;
+}
+```
+*https://www.codewars.com/kata/linked-lists-remove-duplicates/train/javascript
+```
+function Node(data){
+  this.data = data;
+  this.next = null;
+}
+function removeDuplicates(head){
+for (let i = head; i; i = i.next){
+while (i.next && i.data === i.next.data) i.next = i.next.next;
+}
+  return head;
+}
+```
