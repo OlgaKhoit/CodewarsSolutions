@@ -3707,3 +3707,36 @@ if(num % i === 0){
   return true;
 }
 ```
+*https://www.codewars.com/kata/integer-depth/train/javascript
+```
+function computeDepth (x){
+let array =[];
+for (let i=1;;i++){
+array.push((x * i).toString().split(``));
+if ([...new Set([].concat(...array))].length===10) return i;
+}
+  return 'too easy';
+}
+```
+*https://www.codewars.com/kata/54dc6f5a224c26032800005c/solutions/javascript
+
+```
+function stockList(listOfArt, listOfCat){
+if(listOfArt.length===0||listOfCat.length===0) return '';
+const arrs=[];
+let L = '';
+let M = 0;
+for (let i = 0;i < listOfCat.length; i++){
+L = listOfCat[i];
+M = 0;
+for (let j = 0;j < listOfArt.length; j++){
+if (listOfArt[j][0] ===  listOfCat[i]){
+M+= listOfArt[j].match(/[\d]+/g)*1;
+}
+}
+let str = `(${L} : ${M})`;
+arrs.push(str);
+}
+  return arrs.join(' - ');
+}
+```
