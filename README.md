@@ -3785,3 +3785,9 @@ if (array[i]===undefined){
   return array.join``;
 }
 ```
+*https://www.codewars.com/kata/factorial-length/train/javascript
+```
+function count(n){
+  return Math.ceil(Math.log10(2 * Math.PI * n)/2 + n * Math.log10(n/Math.E))
+};
+```
