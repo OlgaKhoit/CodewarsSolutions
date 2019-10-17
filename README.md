@@ -3764,3 +3764,24 @@ let escapeHTML = function(str) {
   return str.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
 };
 ```
+*https://www.codewars.com/kata/esolang-minibitmove/train/javascript
+```
+function interpreter(tape, array){
+array = array.split``;
+for (let i = 0;i < array.length;){
+for (let j = 0;j < tape.length;j++){
+if (tape[j]==='1'){
+array[i] = array[i].replace(/[01]/,v => v === '0'?'1':'0');
+}
+if (tape[j]==='0'){
+i++;
+}
+if (array[i]===undefined){
+ break;
+  
+}
+}    
+}
+  return array.join``;
+}
+```
