@@ -3740,3 +3740,27 @@ arrs.push(str);
   return arrs.join(' - ');
 }
 ```
+*https://www.codewars.com/kata/extract-nested-object-reference/train/javascript
+```
+Object.prototype.hash = function(string) {
+let object = this;
+let array = string.split(".").forEach(function(el) {
+if (object) {
+object = object[el];
+}
+});
+    return object;
+try {
+return eval(`this.${string}`)
+}
+catch(e){
+   return undefined;
+}
+}
+```
+*https://www.codewars.com/kata/escape-html-markup/train/javascript
+```
+let escapeHTML = function(str) {
+  return str.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')
+};
+```
