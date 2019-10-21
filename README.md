@@ -3791,3 +3791,24 @@ function count(n){
   return Math.ceil(Math.log10(2 * Math.PI * n)/2 + n * Math.log10(n/Math.E))
 };
 ```
+*https://www.codewars.com/kata/faro-shuffle-count/train/javascript
+```
+function faroCount(deckSize){
+let shuf = 0;
+let count = 1;
+do {
+shuf++;
+count = (deckSize * (count % 2) + count) / 2 | 0; 
+} while (count !== 1)
+   return shuf;
+}
+```
+*https://www.codewars.com/kata/fat-fingers/train/javascript
+```
+let fatFingers = function(str) {
+if(typeof str !== 'string'){
+   return str;
+}
+   return str.replace(/A/g,'a').split('a').map((s,i)=>i%2?s.replace(/./g,m=>/[a-z]/.test(m)?m.toUpperCase():m.toLowerCase()):s).join``;
+};
+```
