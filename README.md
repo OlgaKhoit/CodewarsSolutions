@@ -3812,3 +3812,21 @@ if(typeof str !== 'string'){
    return str.replace(/A/g,'a').split('a').map((s,i)=>i%2?s.replace(/./g,m=>/[a-z]/.test(m)?m.toUpperCase():m.toLowerCase()):s).join``;
 };
 ```
+*https://www.codewars.com/kata/genetic-algorithm-series-number-5-roulette-wheel-selection/train/javascript
+```
+const select = (population, fitnesses) => {
+let array = fitnesses.map((v,i,array)=>array.slice(0,i+1).reduce((a,b) => a+b,0));
+for (let i = 0;i < population.length; i++){
+if (array[i] >= Math.random()) return population[i];
+}
+};
+```
+*https://www.codewars.com/kata/framed-reflection/train/javascript\
+```
+function mirror(text){
+let asterisk = Math.max(...text.split` `.map(v=>v.length)) + 4;
+let place = Math.max(...text.split` `.map(v => v.length));
+let array = text.split` `.map(v =>'\n* '+v.split(``).reverse().join``+' '.repeat(place - v.length)+' *\n').join``.replace(/\*\n\n\*/g,'*\n*');
+   return '*'.repeat(asterisk) + array + '*'.repeat(asterisk);
+}
+```
