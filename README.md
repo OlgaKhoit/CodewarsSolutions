@@ -3830,3 +3830,44 @@ let array = text.split` `.map(v =>'\n* '+v.split(``).reverse().join``+' '.repeat
    return '*'.repeat(asterisk) + array + '*'.repeat(asterisk);
 }
 ```
+*https://www.codewars.com/kata/frog-jumping/train/javascript
+```
+function solution(a) {
+if (a.length===0) return -1;
+let count = 0;
+for (let i = 0;i < a.length;i += a[i]){
+if (i<0){
+break;
+}
+count++;
+if (count>1000){
+  return -1;
+}
+}
+  return count;
+}
+```
+*https://www.codewars.com/kata/grill-it/train/javascript
+```
+function grille(message, code) {
+let binary = code.toString(2).split("");
+let input = message.split("");
+let output = [];
+while (binary.length > 0){
+let char = binary.pop();
+if (char == 1){
+output.push(input.pop());
+} else {
+input.pop();
+}
+}
+   return output.reverse().join("");
+}
+```
+*https://www.codewars.com/kata/how-much-hex-is-the-fish/train/javascript
+```
+function fisHex(name) {
+let str = name;
+  return str.match(/[a-f]/gi) ? str.match(/[a-f]/gi).reduce((a,b) => a ^ parseInt(b, 16), 0) : 0;
+}
+```
