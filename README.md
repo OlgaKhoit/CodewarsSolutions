@@ -3871,3 +3871,40 @@ let str = name;
   return str.match(/[a-f]/gi) ? str.match(/[a-f]/gi).reduce((a,b) => a ^ parseInt(b, 16), 0) : 0;
 }
 ```
+*https://www.codewars.com/kata/how-many-reindeers/train/javascript
+```
+function reindeers(presents) {
+if (presents === 0){
+  return 2;
+}
+if (presents<=30){
+  return 3;
+}
+if (presents<=60){
+  return 4;
+}
+if (presents<=90){
+  return 5;
+}
+if (presents<=120){
+  return 6;
+}
+if (presents<=150){
+  return 7;
+}
+if (presents<=180) {
+  return 8;
+}
+  throw Error();
+}
+```
+*https://www.codewars.com/kata/implementing-array-dot-prototype-dot-groupby-method/train/javascript
+```
+Array.prototype.groupBy = function(fn) {
+  return this.reduce((a, c) => {
+let vl = fn ? fn(c) : c;
+(a[vl] = a[vl] || []).push(c);
+  return a;
+}, {});
+};
+```
