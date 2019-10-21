@@ -3908,3 +3908,14 @@ let vl = fn ? fn(c) : c;
 }, {});
 };
 ```
+*
+```
+Array.prototype.groupBy = function(fn) {
+let object = {};
+this.forEach(function(a) {
+let key = fn ? fn(a) : a;
+(object[key] = object[key] || []).push(a);
+});
+ return object;
+};
+```
