@@ -3919,3 +3919,27 @@ let key = fn ? fn(a) : a;
  return object;
 };
 ```
+*https://www.codewars.com/kata/inserting-multiple-strings-into-another-string/train/javascript
+```
+function insertAtIndexes(phrase,word,indexes){
+  for(let i = 0; i < indexes.length; i++)
+  phrase = phrase.slice(0,indexes[i] + i * word.length) + word + phrase.slice(indexes[i] + i * word.length);
+   return phrase;
+}
+```
+*https://www.codewars.com/kata/help-mrs-jefferson/train/javascript
+```
+function shortestArrang(n) {
+let array = [];
+for (let i = n - 1; i > 0; i--){
+  for (let j = i; j > 0; j--){
+  array.push(j);
+ if (array.reduce((a,b) => a + b, 0) === n){
+   return array;
+}
+}
+array = [];
+}
+  return [-1];
+}
+```
